@@ -1,6 +1,36 @@
 const blogData = {
     posts: [
         {
+            id: 4,
+            title: "Gato por lebre",
+            date: "28 DEZ 2025",
+            category: "Reflexão / Sociedade",
+            image: "images/truth-lie.jpg",
+            description: "Dia desses, viralizou um vídeo nas redes sociais de uma reportagem antiga do fantástico em que um homem se passou por Tenente-Coronel do exército. Uma reflexão sobre verdade, mentira e a construção de autoridade.",
+            link: "#",
+            featured: true,
+            content: `
+                <p>Dia desses, viralizou um vídeo nas redes sociais de uma reportagem antiga do fantástico em que um homem se passou por Tenente-Coronel do exército e assumiu cargos altos em operações especiais da secretaria de segurança.</p>
+                
+                <p>O cidadão, inebriado de autoestima, começa a reportagem dizendo que “nasceu com um dom para o que faz” (o que não deixa de ser verdade, tendo em vista que o que ele fez de “melhor” a vida toda, foi mentir). Mas, não ignoro outra característica importante do protagonista dessa história: estudioso! Extremamente estudioso. A reportagem continua, citando os muitos livros, cursos internacionais e projetos elaborados pelo então “especialista em segurança pública” e auto empossado Tenente-Coronel, que galgou o alto escalão e missões impressionantes com uma resposta surpreendente à seguinte pergunta, feita pelo repórter: “Como você fez tudo isso?”</p>
+
+                <p>- Ué… basta dizer! [pausa irônica] Basta dizer…<br>
+                Repórter: -Você disse?<br>
+                - Disse!<br>
+                - E as pessoas acreditaram…<br>
+                - Sim!</p>
+
+                <p>A conversa vai longe, cheia de orgulho pelas “conquistas” baseadas na falsidade.<br>
+                Sobre os documentos, tão mal falsificados que foram a causa da descoberta, o charlatão se gaba: “Não falsifiquei! Criei. Nada foi alterado, foi criado do zero”.</p>
+
+                <p>Mas o que mais me chamou a atenção nessa reportagem, foi a ironia que se revela: o mentiroso tem razão. Hoje, no meio de alguns mercados muito aquecidos (principalmente o de vendas através de marketing digital), a ferramenta mais eficiente é mentir - ou melhor, “dizer”. Você pode dizer o que quiser, quando quiser, da maneira e com a interpretação que achar pertinente. Tudo é ponto de vista. Tudo é “percepção”. E a “autoridade” se constroi pelas afirmações que “AINDA não são verdade, porque AINDA não foram repetidas mil vezes”. Nesse ramo, quase ninguém investiga a “procedência” dos produtos, são convencidas da necessidade (ou hipnotizadas por uma promessa extravagante), pagam, e fica por isso mesmo… às vezes, quando o arrependimento é grande, ainda pedem reembolso. Mas até isso é cansativo e frustrante.</p>
+
+                <p>A reflexão que quero trazer aqui, tem a ver com poder de escolha. Em qualquer negociação, você sempre pode questionar o que te foi proposto. Soluções mirabolantes só existem em desenhos animados e filmes de ficção. Um “milagre” só é milagre porque está completamente fora dos padrões previsíveis.</p>
+
+                <p>Se a proposta parece “boa demais pra ser verdade” é muito provável que realmente não seja. Se o cara que te promete enriquecer anda de carro importado alugado, ou tem mais dívidas do que investimentos, se a promessa é muito extravagante… DESCONFIE!</p>
+            `
+        },
+        {
             id: 1,
             title: "Um Encontro Improvável: O Abade, o Dramaturgo e o Psicólogo",
             date: "27 DEZ 2025",
@@ -8,7 +38,7 @@ const blogData = {
             image: "images/blue-smoke-book.png", // Blue smoke/Book vibe attempt (Concept: Atmosphere)
             description: "Mergulhado no simbolismo das letras, flutuando através dos séculos, estava eu na pequena sala da minha casa. Surgiu de entre as páginas uma fumaça azul e fria que subia, contrariando as leis da termodinâmica.",
             link: "#",
-            featured: true,
+            featured: false,
             content: `
                 <p>Mergulhado no simbolismo das letras, flutuando através dos séculos, estava eu na pequena sala da minha casa, a rigor vestindo um terno cinza e sapatos de camurça, o livro aberto em cima da mesa e os olhos opacos em imaginativa contemplação. Surgiu de entre as páginas uma fumaça azul e fria que subia — contrariando as leis da termodinâmica — serpenteando em direção ao sofá. A fumaça tomou forma e expandiu-se, dando vida à presença dos três grandes homens, com os quais iniciei a conversa, admirado como S. Pedro na transfiguração.</p>
                 
