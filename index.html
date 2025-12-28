@@ -195,6 +195,11 @@
                 Laboratório de IA
                 <sup id="count-tools" class="font-mono text-[10px] ml-1 text-slate">--</sup>
             </button>
+            <button onclick="switchTab('medicatholic')" id="tab-medicatholic"
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate hover:text-charcoal opacity-60 hover:opacity-100">
+                Medicatholic
+                <sup class="font-mono text-[10px] ml-1 text-terracotta">✨</sup>
+            </button>
         </div>
     </div>
 
@@ -276,7 +281,40 @@
             </div>
         </div>
 
-        <!-- ABA 3: SINGLE POST VIEW (Hidden by default) -->
+        <!-- ABA 3: MEDICATHOLIC (Iframe Embedding) -->
+        <div id="content-medicatholic" class="tab-content">
+            <div class="animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <div class="mb-12 max-w-2xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-[1px] w-8 bg-terracotta"></div>
+                        <span class="font-mono text-xs text-terracotta tracking-widest uppercase">
+                            Espiritualidade & IA
+                        </span>
+                    </div>
+                    <h2 class="font-serif text-3xl text-charcoal font-bold mb-4">Medicatholic Studio</h2>
+                    <p class="font-sans text-slate font-light leading-relaxed">
+                        Um ambiente experimental onde a tradição milenar da Igreja encontra a inteligência artificial
+                        para auxiliar na meditação e estudo.
+                    </p>
+                </div>
+
+                <div
+                    class="w-full h-[800px] border border-sand rounded-sm overflow-hidden shadow-card bg-paper relative">
+                    <!-- Loading State / Fallback can be added here -->
+                    <iframe src="http://localhost:3000" title="Medicatholic App" class="w-full h-full border-none"
+                        loading="lazy"></iframe>
+                    <div
+                        class="absolute bottom-0 right-0 bg-charcoal text-paper text-[10px] font-mono px-3 py-1 opacity-50">
+                        Powered by Genkit
+                    </div>
+                </div>
+                <p class="text-center font-mono text-[10px] text-slate/40 mt-4">
+                    Se o aplicativo não carregar, verifique se o servidor local está rodando ou aguarde o deploy.
+                </p>
+            </div>
+        </div>
+
+        <!-- ABA 4: SINGLE POST VIEW (Hidden by default) -->
         <article id="single-post-view" class="hidden fade-in-up">
             <button onclick="closePost()"
                 class="group mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate hover:text-terracotta transition-colors">
