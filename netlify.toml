@@ -5,3 +5,4 @@
 [dev]
   framework = "#static"
   command = "npm run build"
+  # Force Netlify Rebuild (Cache Bust)
