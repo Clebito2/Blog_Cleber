@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
 
     try {
         const { theme } = JSON.parse(event.body);
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-flash-latest", generationConfig: { responseMimeType: "application/json" } });
 
         // logic adapted from medicatholic/src/ai/flows/thematic-meditation.ts
         let specialInstructions = '';
