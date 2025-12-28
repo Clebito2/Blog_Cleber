@@ -181,6 +181,161 @@ const blogData = {
                     </a>
                 </div>
             `
+        },
+        {
+            id: "notebooklm-marketing",
+            name: "Biblioteca Definitiva do Digital",
+            category: "MARKETING & VENDAS",
+            description: "Uma curadoria de conteúdo excepcional sobre Marketing, Vendas e Persuasão, processada pelo NotebookLM.",
+            image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop", // Business/Strategy Vibe
+            link: "#",
+            content: `
+                <p>Se você trabalha com o digital, sabe que o conhecimento está fragmentado: uma live incrível no YouTube, um PDF técnico sobre tráfego, um best-seller sobre negociação na estante e um checklist de lançamento salvo em alguma pasta esquecida.</p>
+
+                <p>Hoje, trago para vocês uma curadoria de conteúdo excepcional processada pelo <strong>NotebookLM</strong>. Analisei um repositório que reúne o "suco" do Marketing Digital, Vendas e Comunicação Persuasiva. Não é apenas um amontoado de arquivos; é uma base de conhecimento que conecta a teoria dos maiores best-sellers mundiais com a prática das trincheiras do mercado digital brasileiro.</p>
+
+                <h3>🚀 O que tem neste conteúdo?</h3>
+                <p>Este Notebook é uma verdadeira <strong>universidade de negócios</strong>, compilando transcrições de aulas ao vivo, ebooks técnicos, resumos de livros clássicos e guias práticos.</p>
+                <p>O conteúdo está dividido em quatro pilares principais:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">1. Marketing Digital e Tráfego</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Tutoriais atualizados (2025) sobre Meta Ads e YouTube.</li>
+                            <li>• Guias completos sobre como iniciar no digital.</li>
+                            <li>• Criação de conteúdo com IA e automação.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">2. Copywriting e Escrita</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Técnicas de escrita persuasiva.</li>
+                            <li>• Conteúdos focados em narrativa e jornada do herói.</li>
+                            <li>• Como conseguir clientes sem portfólio.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">3. Vendas e Negociação</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Sabedoria de Chris Voss e Robert Cialdini.</li>
+                            <li>• Manuais práticos de contorno de objeções.</li>
+                            <li>• Social Selling e relatórios de vendas.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">4. Liderança e Comunicação</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Oratória para perder o medo de falar.</li>
+                            <li>• Análise de linguagem corporal.</li>
+                            <li>• Excelência em experiência do cliente (Jeito Disney).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>🏗️ Como foi estruturado?</h3>
+                <p>A beleza deste NotebookLM está na mistura de formatos. Ele cruza informações de:</p>
+                <ul>
+                    <li><strong>Transcrições de Lives:</strong> Onde está o conteúdo tático e atual (o "como fazer" agora).</li>
+                    <li><strong>PDFs de Livros Clássicos:</strong> Onde estão os fundamentos imutáveis da psicologia humana e persuasão.</li>
+                    <li><strong>Checklists Práticos:</strong> Passo a passo para lançamentos e estruturação de produtos.</li>
+                </ul>
+                <p>Isso permite que você faça perguntas estratégicas para a IA, como: <em>"Como aplicar as técnicas de negociação do Chris Voss para contornar objeções em um lançamento digital?"</em> ou <em>"Crie um roteiro de vídeo para o YouTube usando a estrutura da Jornada do Herói"</em>.</p>
+
+                <h3>🔍 O que você vai encontrar</h3>
+                <p>Este material é ideal para consultores, coprodutores, experts e qualquer pessoa que queira escalar seus resultados. Você encontrará:</p>
+                <ul>
+                    <li><strong>Planos de Ação:</strong> Resumos de estratégias de lançamento (do zero ao avançado).</li>
+                    <li><strong>Mentalidade:</strong> Insights sobre liderança de alta performance e antifragilidade.</li>
+                    <li><strong>Ferramentas:</strong> Scripts de vendas e templates de copy.</li>
+                </ul>
+
+                <p>É um recurso poderoso para quem não quer apenas "dicas soltas", mas sim entender a engenharia por trás dos grandes negócios digitais.</p>
+
+                <div class="my-12 p-8 bg-charcoal text-paper rounded-sm text-center">
+                    <p class="font-mono text-xs uppercase tracking-widest text-paper/60 mb-4">Link Externo</p>
+                    <a href="https://notebooklm.google.com/notebook/0a05108a-82c7-40c3-9060-e0ec1d403458" target="_blank" class="inline-block font-serif text-2xl font-bold border-b border-paper hover:text-terracotta hover:border-terracotta transition-colors pb-1">
+                        Acesse a Biblioteca Definitiva
+                    </a>
+                </div>
+            `
+        },
+        {
+            id: "notebooklm-catholic",
+            name: "Tesouro da Tradição Católica",
+            category: "ESPIRITUALIDADE & ESTUDO",
+            description: "Uma biblioteca completa no NotebookLM: Doutrina, Mística e Teologia dos maiores santos da Igreja.",
+            image: "https://images.unsplash.com/photo-1519682577862-22b62b24e493?q=80&w=1200&auto=format&fit=crop", // Library/Tradition vibe
+            link: "#",
+            content: `
+                <p>Para os leitores que buscam aprofundar sua fé, compreender a doutrina bimilenar da Igreja e cultivar uma vida interior sólida, analisei um <strong>NotebookLM</strong> que é um verdadeiro tesouro espiritual.</p>
+
+                <p>Este não é apenas um conjunto de PDFs; é uma biblioteca de formação católica robusta, reunindo desde a alta teologia escolástica até manuais práticos de ascese e mística. Se você quer estudar o Catolicismo a sério, longe da superficialidade, este é o lugar.</p>
+
+                <h3>⛪ O que tem neste conteúdo?</h3>
+                <p>O acervo é vasto e foca principalmente na tradição e na ortodoxia católica. Podemos dividir o conteúdo em quatro pilares mestres:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">1. Doutrina e Teologia (A Rocha)</h4>
+                        <ul class="text-sm space-y-2">
+                             <li>• Obras fundamentais como o Catecismo Romano e o Código de Direito Canônico.</li>
+                             <li>• A genialidade de Santo Tomás de Aquino no Compêndio de Teologia.</li>
+                             <li>• Defesa da fé com G.K. Chesterton e São Vicente de Lérins.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">2. Espiritualidade (O Caminho)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• "A Alma de Todo Apostolado" e "Filoteia".</li>
+                            <li>• Tratados práticos sobre desânimo e os Quatro Temperamentos.</li>
+                            <li>• As profundas Meditações de Santo Afonso Maria de Ligório.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">3. Mariologia (A Mãe)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• "Tratado da Verdadeira Devoção" de São Luís.</li>
+                            <li>• Estudos sobre a realeza de Maria e seus títulos.</li>
+                            <li>• Teologia mariana profunda e devocional.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">4. História e Cultura (O Legado)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Análises históricas do Concílio Vaticano II (Roberto de Mattei).</li>
+                            <li>• O impacto da Igreja na Civilização Ocidental.</li>
+                            <li>• Hagiografia clássica com a Legenda Áurea.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>🏗️ Como foi estruturado?</h3>
+                <p>Este NotebookLM funciona como um <strong>Diretor Espiritual Digital</strong>. Ele ingeriu dezenas de tratados clássicos e permite que você faça perguntas que cruzam a sabedoria de vários santos e teólogos.</p>
+                <p>A estrutura permite consultas por temas de vida:</p>
+                <ul>
+                    <li><em>"Estou me sentindo árido na oração, o que Santo Afonso e Dom Chautard aconselham?"</em></li>
+                    <li><em>"Qual é a explicação teológica para a Eucaristia segundo Santo Tomás?"</em></li>
+                    <li><em>"Como combater os erros modernos segundo Chesterton e a doutrina tradicional?"</em></li>
+                </ul>
+
+                <h3>🔍 O que você pode encontrar</h3>
+                <p>Este material é essencial para catequistas, padres, seminaristas e leigos engajados. Você encontrará:</p>
+                <ul>
+                    <li><strong>Guias de Oração:</strong> Passos concretos para a <em>Lectio Divina</em>.</li>
+                    <li><strong>Formação de Caráter:</strong> Análise dos temperamentos e virtudes.</li>
+                    <li><strong>Combate Espiritual:</strong> Armas contra o desânimo e ilusões espirituais.</li>
+                </ul>
+
+                <p>É uma coleção que une a intelectualidade da escolástica com a doçura da mística, perfeita para quem entende que a fé busca a inteligência.</p>
+
+                <div class="my-12 p-8 bg-charcoal text-paper rounded-sm text-center">
+                    <p class="font-mono text-xs uppercase tracking-widest text-paper/60 mb-4">Link Externo</p>
+                    <a href="https://notebooklm.google.com/notebook/4d48cbcc-91a5-41ba-82ca-b7036aa12886" target="_blank" class="inline-block font-serif text-2xl font-bold border-b border-paper hover:text-terracotta hover:border-terracotta transition-colors pb-1">
+                         Acesse o Catolicismo e Tradição
+                    </a>
+                </div>
+            `
         }
     ]
 };
