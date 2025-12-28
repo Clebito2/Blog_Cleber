@@ -755,7 +755,6 @@
                         <li><a href="consultoria.html"
                                 class="hover:text-terracotta transition-colors hover-underline">Consultoria</a>
                         </li>
-                        <li><a href="#" class="hover:text-terracotta transition-colors hover-underline">Artigos</a></li>
                         <li><a href="#" class="hover:text-terracotta transition-colors hover-underline">Lab de IA</a>
                         </li>
                     </ul>
@@ -795,6 +794,16 @@
             const activeButton = document.getElementById(`tab-${tabId}`);
             activeButton.classList.remove('border-transparent', 'text-slate', 'opacity-60');
             activeButton.classList.add('border-terracotta', 'text-charcoal', 'opacity-100');
+
+            // Handle Newsletter Visibility
+            const newsletterSection = document.getElementById('newsletter-section');
+            if (newsletterSection) {
+                if (tabId === 'medicatholic') {
+                    newsletterSection.classList.add('hidden');
+                } else {
+                    newsletterSection.classList.remove('hidden');
+                }
+            }
         }
     </script>
     <script src="js/app.js"></script>
