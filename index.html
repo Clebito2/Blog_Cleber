@@ -217,8 +217,9 @@
                 </div>
                 <h1
                     class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight font-bold tracking-tighter mb-8">
-                    Gestor tático de 36 anos, formado em Sistemas de Informação, com uma carreira dedicada a otimizar
-                    processos e resolver problemas que parecem insolucionáveis para alguns.
+                    Gestor tático de 36 anos, formado em Sistemas de Informação, com ampla experiência em suporte
+                    tecnológico e carreira consolidada na otimização de processos, resolvendo problemas que pareciam
+                    complicados demais para alguns.
                 </h1>
                 <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-100 fade-in-up mb-6">
                     Carrego uma disciplina que transforma desafios em soluções elegantes — de consultorias em IA para
@@ -283,34 +284,64 @@
 
         <!-- ABA 3: MEDICATHOLIC (Iframe Embedding) -->
         <div id="content-medicatholic" class="tab-content">
-            <div class="animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <div class="mb-12 max-w-2xl">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="h-[1px] w-8 bg-terracotta"></div>
-                        <span class="font-mono text-xs text-terracotta tracking-widest uppercase">
-                            Espiritualidade & IA
-                        </span>
-                    </div>
-                    <h2 class="font-serif text-3xl text-charcoal font-bold mb-4">Medicatholic Studio</h2>
-                    <p class="font-sans text-slate font-light leading-relaxed">
-                        Um ambiente experimental onde a tradição milenar da Igreja encontra a inteligência artificial
-                        para auxiliar na meditação e estudo.
+            <!-- Medicatholic UI (Native) -->
+            <div class="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl mx-auto py-12">
+                <div class="text-center mb-16">
+                    <span
+                        class="font-mono text-xs uppercase tracking-[0.2em] text-terracotta mb-4 block">Espiritualidade
+                        & IA</span>
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-paper mb-6">Lectio Divina</h2>
+                    <p class="font-sans text-slate text-lg max-w-2xl mx-auto leading-relaxed">
+                        Selecione um tema para receber uma meditação guiada baseada na sabedoria dos santos e na
+                        tradição católica.
                     </p>
                 </div>
 
-                <div
-                    class="w-full h-[800px] border border-sand rounded-sm overflow-hidden shadow-card bg-paper relative">
-                    <!-- Loading State / Fallback can be added here -->
-                    <iframe src="https://lectiodivina1.netlify.app/" title="Medicatholic App"
-                        class="w-full h-full border-none" loading="lazy"></iframe>
-                    <div
-                        class="absolute bottom-0 right-0 bg-charcoal text-paper text-[10px] font-mono px-3 py-1 opacity-50">
-                        Powered by Genkit
+                <!-- Form -->
+                <form id="meditation-form" class="max-w-md mx-auto space-y-8">
+                    <div class="grid grid-cols-1 gap-4">
+                        <label class="cursor-pointer group">
+                            <input type="radio" name="theme" value="Exame de consciência" class="peer sr-only" checked>
+                            <div
+                                class="p-6 border border-slate/20 rounded-lg hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-terracotta/10 transition-all text-center">
+                                <span class="font-serif text-xl text-paper block mb-2">Exame de Consciência</span>
+                                <span class="font-sans text-sm text-slate">Reflexão e arrependimento</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="radio" name="theme" value="Casamento" class="peer sr-only">
+                            <div
+                                class="p-6 border border-slate/20 rounded-lg hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-terracotta/10 transition-all text-center">
+                                <span class="font-serif text-xl text-paper block mb-2">Casamento e Família</span>
+                                <span class="font-sans text-sm text-slate">Santidade no lar</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="radio" name="theme" value="Anjo da Guarda" class="peer sr-only">
+                            <div
+                                class="p-6 border border-slate/20 rounded-lg hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-terracotta/10 transition-all text-center">
+                                <span class="font-serif text-xl text-paper block mb-2">Anjo da Guarda</span>
+                                <span class="font-sans text-sm text-slate">Devoção e proteção</span>
+                            </div>
+                        </label>
                     </div>
+
+                    <button type="submit"
+                        class="w-full py-4 bg-terracotta text-paper font-mono text-sm uppercase tracking-widest hover:bg-terracotta/80 transition-colors">
+                        Gerar Meditação
+                    </button>
+                </form>
+
+                <!-- Loading State -->
+                <div id="meditation-loading" class="hidden text-center py-20">
+                    <div
+                        class="inline-block w-12 h-12 border-4 border-slate/20 border-t-terracotta rounded-full animate-spin mb-4">
+                    </div>
+                    <p class="font-mono text-xs uppercase tracking-widest text-slate">Consultando a Tradição...</p>
                 </div>
-                <p class="text-center font-mono text-[10px] text-slate/40 mt-4">
-                    Se o aplicativo não carregar, verifique se o servidor local está rodando ou aguarde o deploy.
-                </p>
+
+                <!-- Result Container -->
+                <div id="meditation-result" class="mt-12"></div>
             </div>
         </div>
 
@@ -460,6 +491,8 @@
             activeButton.classList.add('border-terracotta', 'text-charcoal', 'opacity-100');
         }
     </script>
+    <script src="js/app.js"></script>
+    <script src="js/medicatholic.js"></script>
 </body>
 
 </html>
