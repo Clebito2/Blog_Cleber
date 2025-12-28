@@ -1,10 +1,4 @@
-
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-
-// Note: In production, use process.env.GOOGLE_GENAI_API_KEY
-// User provided key for this specific implementation context
-const API_KEY = "AIzaSyDNwRYZ0CzkqAh2weARXUm68_L1gzDzz8o";
-const genAI = new GoogleGenerativeAI(API_KEY);
 
 exports.handler = async (event, context) => {
     if (event.httpMethod !== "POST") {
@@ -12,6 +6,12 @@ exports.handler = async (event, context) => {
     }
 
     try {
+        const apiKey = process.env.GOOGLE_GENAI_API_KEY;
+        if (!apiKey) {
+            throw new Error("API Key configuration missing");
+        }
+
+        const genAI = new GoogleGenerativeAI(apiKey);
         const { theme } = JSON.parse(event.body);
         const model = genAI.getGenerativeModel({ model: "gemini-flash-latest", generationConfig: { responseMimeType: "application/json" } });
 
