@@ -121,15 +121,15 @@ function renderPostDetails(id) {
     const contentContainer = document.getElementById('post-content');
     contentContainer.innerHTML = post.content;
 
-    // Add Share Button
-    const shareBtn = document.createElement('div');
-    shareBtn.className = "flex justify-center my-8";
-    shareBtn.innerHTML = `
-        <button onclick="copyLink()" class="flex items-center gap-2 px-4 py-2 bg-slate/10 hover:bg-slate/20 text-slate rounded-sm font-mono text-xs transition-colors">
-            <i class="fa-solid fa-link"></i> Copiar Link
+    // Add Share Icon at Bottom
+    const shareContainer = document.createElement('div');
+    shareContainer.className = "flex justify-center mt-12 pt-8 opacity-50 hover:opacity-100 transition-opacity";
+    shareContainer.innerHTML = `
+        <button onclick="copyLink()" class="text-charcoal hover:text-terracotta transition-colors text-xl" title="Compartilhar Link">
+            <i class="fa-solid fa-share-nodes"></i>
         </button>
     `;
-    contentContainer.prepend(shareBtn);
+    contentContainer.appendChild(shareContainer);
 
     // Toggle Views
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
