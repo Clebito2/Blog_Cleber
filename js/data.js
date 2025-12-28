@@ -240,9 +240,10 @@ const blogData = {
         {
             id: "notebooklm-catholic",
             name: "Tesouro da Tradição Católica",
+            date: "22/02/2025",
             category: "ESPIRITUALIDADE & ESTUDO",
             description: "Uma biblioteca completa no NotebookLM: Doutrina, Mística e Teologia dos maiores santos da Igreja.",
-            image: "https://images.unsplash.com/photo-1519682577862-22b62b24e493?q=80&w=1200&auto=format&fit=crop", // Library/Tradition vibe
+            image: "https://i.pinimg.com/736x/a1/0a/c3/a10ac3c933aedef3af85bcda0da945b4.jpg", // Library/Tradition vibe updated
             link: "#",
             content: `
                 <p>Para os leitores que buscam aprofundar sua fé, compreender a doutrina bimilenar da Igreja e cultivar uma vida interior sólida, analisei um <strong>NotebookLM</strong> que é um verdadeiro tesouro espiritual.</p>
