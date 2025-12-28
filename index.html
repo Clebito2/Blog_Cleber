@@ -263,6 +263,43 @@
             </div>
         </div>
 
+        <!-- ABA 3: SINGLE POST VIEW (Hidden by default) -->
+        <article id="single-post-view" class="hidden fade-in-up">
+            <button onclick="closePost()"
+                class="group mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate hover:text-terracotta transition-colors">
+                <i class="fa-solid fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
+                Voltar
+            </button>
+
+            <header class="max-w-3xl mx-auto mb-12 text-center">
+                <div class="flex items-center justify-center gap-3 font-mono text-xs text-slate mb-6">
+                    <span id="post-category" class="uppercase tracking-widest">Categoria</span>
+                    <span class="w-1 h-1 rounded-full bg-terracotta"></span>
+                    <span id="post-date">Data</span>
+                </div>
+                <h1 id="post-title"
+                    class="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight mb-8">
+                    Título do Post
+                </h1>
+            </header>
+
+            <div class="w-full h-[400px] md:h-[600px] overflow-hidden rounded-sm mb-16 relative">
+                <div class="absolute inset-0 bg-charcoal/5"></div>
+                <img id="post-image" src="" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div id="post-content" class="prose prose-lg prose-slate mx-auto font-serif leading-loose">
+                <!-- Content injected here -->
+            </div>
+
+            <div class="max-w-3xl mx-auto mt-20 pt-12 border-t border-charcoal/10 flex justify-center">
+                <button onclick="closePost()"
+                    class="bg-transparent border border-sand hover:border-charcoal text-charcoal px-8 py-3 rounded-sm font-mono text-xs uppercase tracking-widest transition-all">
+                    Ler outros textos
+                </button>
+            </div>
+        </article>
+
     </main>
 
     <!-- Newsletter Section (Adicionada) -->
@@ -308,12 +345,15 @@
                         comportamento humano e eficiência operacional.
                     </p>
                     <div class="flex gap-6 text-charcoal">
-                        <a href="#" class="hover:text-terracotta transition-colors"><i
+                        <a href="https://www.linkedin.com/in/cl%C3%A9ber-donato-78b653204/" target="_blank"
+                            class="hover:text-terracotta transition-colors"><i
                                 class="fa-brands fa-linkedin text-xl"></i></a>
-                        <a href="#" class="hover:text-terracotta transition-colors"><i
-                                class="fa-brands fa-github text-xl"></i></a>
-                        <a href="#" class="hover:text-terracotta transition-colors"><i
+                        <a href="https://www.instagram.com/desenvolvimento.continuo1/" target="_blank"
+                            class="hover:text-terracotta transition-colors"><i
                                 class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://www.youtube.com/@cleberdonato2" target="_blank"
+                            class="hover:text-terracotta transition-colors"><i
+                                class="fa-brands fa-youtube text-xl"></i></a>
                     </div>
                 </div>
 

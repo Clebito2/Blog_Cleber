@@ -1,16 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    renderPosts();
-    renderTools();
-    updateCounts();
-});
-
 function renderPosts() {
     const container = document.getElementById('posts-container');
     const featuredContainer = document.getElementById('featured-post-container');
 
     if (!container || !featuredContainer) return;
 
-    // Clear loading/static content
     container.innerHTML = '';
     featuredContainer.innerHTML = '';
 
@@ -20,7 +13,7 @@ function renderPosts() {
     // Render Featured
     if (featured) {
         featuredContainer.innerHTML = `
-            <article class="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-20 items-center fade-in-up delay-200">
+            <article onclick="viewPost(${featured.id})" class="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-20 items-center fade-in-up delay-200">
                 <div class="lg:col-span-7 relative overflow-hidden rounded-sm h-[400px] lg:h-[500px]">
                     <div class="absolute inset-0 bg-charcoal/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                     <img src="${featured.image}" 
@@ -36,7 +29,7 @@ function renderPosts() {
                     <h2 class="font-serif text-3xl md:text-4xl text-charcoal font-bold leading-tight mb-6 group-hover:text-terracotta transition-colors duration-300">
                         ${featured.title}
                     </h2>
-                    <p class="font-sans text-slate text-base leading-loose font-light mb-6 drop-cap text-justify">
+                    <p class="font-sans text-slate text-base leading-loose font-light mb-6 drop-cap text-justify line-clamp-4">
                         ${featured.description}
                     </p>
                     <div class="flex items-center gap-2 group/link">
@@ -51,7 +44,7 @@ function renderPosts() {
     // Render Others
     others.forEach(post => {
         const html = `
-            <article class="group cursor-pointer flex flex-col">
+            <article onclick="viewPost(${post.id})" class="group cursor-pointer flex flex-col">
                 <div class="aspect-[16/9] overflow-hidden rounded-sm mb-5 bg-gray-200 relative">
                      <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0">
                 </div>
@@ -68,6 +61,53 @@ function renderPosts() {
     });
 }
 
+function viewPost(id) {
+    const post = blogData.posts.find(p => p.id === id);
+    if (!post) return;
+
+    // Populate View
+    document.getElementById('post-category').innerText = post.category;
+    document.getElementById('post-date').innerText = post.date;
+    document.getElementById('post-title').innerText = post.title;
+    document.getElementById('post-image').src = post.image;
+    document.getElementById('post-content').innerHTML = post.content;
+
+    // Toggle Views
+    document.getElementById('content-blog').classList.remove('active');
+    document.getElementById('content-blog').classList.add('hidden');
+
+    // Hide tabs
+    const tabs = document.querySelector('.sticky.top-24');
+    if (tabs) tabs.classList.add('hidden');
+
+    const view = document.getElementById('single-post-view');
+    view.classList.remove('hidden');
+
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closePost() {
+    // Toggle Views Back
+    document.getElementById('single-post-view').classList.add('hidden');
+    document.getElementById('content-blog').classList.remove('hidden');
+    document.getElementById('content-blog').classList.add('active');
+
+    // Show tabs
+    const tabs = document.querySelector('.sticky.top-24');
+    if (tabs) tabs.classList.remove('hidden');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Helpers
+document.addEventListener('DOMContentLoaded', () => {
+    renderPosts();
+    renderTools();
+    updateCounts();
+});
+
+// Keep existing renderTools and updateCounts
 function renderTools() {
     const container = document.getElementById('tools-container');
     if (!container) return;
