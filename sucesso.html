@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Confirmada | Cléber Donato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { paper: '#F7F7F2', charcoal: '#1A1A1A', terracotta: '#9A3B3B', sand: '#E5E5E0' },
+                    fontFamily: { serif: ['Merriweather', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-paper flex items-center justify-center min-h-screen text-charcoal">
+    <div class="max-w-md p-8 text-center">
+        <div class="mb-6 text-terracotta text-5xl">
+            <i class="fa-solid fa-envelope-open-text"></i>
+        </div>
+        <h1 class="font-serif text-3xl font-bold mb-4">Inscrição Confirmada!</h1>
+        <p class="font-sans text-slate-600 mb-8 leading-relaxed">
+            Obrigado por se juntar à lista. Você receberá atualizações ocasionais sobre tecnologia e humanismo
+            diretamente na sua caixa de entrada.
+        </p>
+        <a href="/"
+            class="inline-block bg-charcoal text-paper px-6 py-3 rounded-sm font-mono text-xs uppercase tracking-widest hover:bg-terracotta transition-colors">
+            Voltar para o Blog
+        </a>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+
+</html>
