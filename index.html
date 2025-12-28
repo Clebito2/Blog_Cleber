@@ -359,8 +359,118 @@
 
                 <!-- Result Container -->
                 <div id="meditation-result" class="mt-12"></div>
+
+                <!-- Static Guides Content (Hidden) -->
+                <div id="static-rosario"
+                    class="hidden fade-in-up max-w-3xl mx-auto bg-white p-8 md:p-12 border border-sand rounded-sm relative mt-12 text-left">
+                    <button onclick="hideStaticGuide()"
+                        class="absolute top-4 right-4 text-slate hover:text-terracotta"><i
+                            class="fa-solid fa-xmark text-xl"></i></button>
+                    <h3 class="font-serif text-2xl text-charcoal mb-6 text-center">Como Rezar o Santo Rosário</h3>
+                    <div class="prose prose-slate mx-auto font-light text-sm">
+                        <ol class="list-decimal space-y-4 marker:text-terracotta">
+                            <li><strong>Sinal da Cruz:</strong> Em nome do Pai, do Filho e do Espírito Santo. Amém.</li>
+                            <li><strong>Creio:</strong> Reze o Credo Apostólico segurando a cruz.</li>
+                            <li><strong>Pai Nosso:</strong> Na primeira conta grande.</li>
+                            <li><strong>Ave Maria:</strong> Três vezes, pedindo Fé, Esperança e Caridade.</li>
+                            <li><strong>Glória:</strong> Glória ao Pai, ao Filho e ao Espírito Santo.</li>
+                            <li><strong>Mistérios:</strong> Anuncie o mistério do dia e reze um Pai Nosso.
+                                <ul class="list-disc pl-4 mt-2 text-xs text-slate/70">
+                                    <li><em>Gozosos (Seg/Sab):</em> Encarnação, Visitação, Nascimento, Apresentação,
+                                        Perda e Encontro.</li>
+                                    <li><em>Luminosos (Qui):</em> Batismo, Caná, Reino de Deus, Transfiguração,
+                                        Eucaristia.</li>
+                                    <li><em>Dolorosos (Ter/Sex):</em> Agonia, Flagelação, Coroação, Cruz, Morte.</li>
+                                    <li><em>Gloriosos (Qua/Dom):</em> Ressurreição, Ascensão, Pentecostes, Assunção,
+                                        Coroação de Maria.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Dezena:</strong> Reze 10 Ave Marias meditando o mistério.</li>
+                            <li><strong>Final da Dezena:</strong> Glória ao Pai + Ó meu Jesus (Jaculatória).</li>
+                            <li>Repita os passos 6-8 para os 5 mistérios.</li>
+                            <li><strong>Salve Rainha:</strong> Encerre com a Salve Rainha.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="static-exame"
+                    class="hidden fade-in-up max-w-3xl mx-auto bg-white p-8 md:p-12 border border-sand rounded-sm relative mt-12 text-left">
+                    <button onclick="hideStaticGuide()"
+                        class="absolute top-4 right-4 text-slate hover:text-terracotta"><i
+                            class="fa-solid fa-xmark text-xl"></i></button>
+                    <h3 class="font-serif text-2xl text-charcoal mb-6 text-center">Exame de Consciência</h3>
+                    <p class="text-center font-sans text-sm text-slate mb-8">Antes da confissão, coloque-se na presença
+                        de Deus e revise sua vida.</p>
+                    <div class="space-y-6 font-sans text-sm text-charcoal">
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">1. Amar a Deus sobre todas as coisas</h4>
+                            <p class="text-slate">Rezei diariamente? Duvidei de verdades da fé? Fui supersticioso?
+                                Faltei à Missa aos domingos?</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">2. O Santo Nome de Deus</h4>
+                            <p class="text-slate">Blasfemei? Jurei falso? Usei o nome de Deus em vão?</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">3. Honrar Pai e Mãe (e autoridades)</h4>
+                            <p class="text-slate">Desrespeitei meus pais? Fui negligente com meus deveres familiares ou
+                                civis?</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">4. Não Matar (Vida e Ira)</h4>
+                            <p class="text-slate">Guardei ódio ou rancor? Desejei o mal? Fui violento? Usei drogas ou
+                                abusei do álcool?</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">5. Castidade (Não Pecar contra a Castidade)</h4>
+                            <p class="text-slate">Consenti em maus pensamentos? Vi pornografia? Pratiquei atos impuros
+                                (sozinho ou com outros)?</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">6. Não Roubar</h4>
+                            <p class="text-slate">Peguei algo que não é meu? Fui desonesto nos negócios? Paguei minhas
+                                dívidas?</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-terracotta mb-2">7. Não Mentir</h4>
+                            <p class="text-slate">Menti? Culpabilizei outros injustamente? Fiz fofoca ou calúnia?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script>
+            // Static Guide Logic
+            function showStaticGuide(type) {
+                const form = document.getElementById('meditation-form');
+                const result = document.getElementById('meditation-result');
+                const rosario = document.getElementById('static-rosario');
+                const exame = document.getElementById('static-exame');
+
+                if (form) form.classList.add('hidden');
+                if (result) result.innerHTML = '';
+
+                if (rosario) rosario.classList.add('hidden');
+                if (exame) exame.classList.add('hidden');
+
+                if (type === 'rosario' && rosario) {
+                    rosario.classList.remove('hidden');
+                } else if (type === 'exame' && exame) {
+                    exame.classList.remove('hidden');
+                }
+            }
+
+            function hideStaticGuide() {
+                const form = document.getElementById('meditation-form');
+                const rosario = document.getElementById('static-rosario');
+                const exame = document.getElementById('static-exame');
+
+                if (rosario) rosario.classList.add('hidden');
+                if (exame) exame.classList.add('hidden');
+                if (form) form.classList.remove('hidden');
+            }
+        </script>
 
         <!-- ABA 4: SINGLE POST VIEW (Hidden by default) -->
         <article id="single-post-view" class="hidden fade-in-up">
