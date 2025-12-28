@@ -197,7 +197,7 @@
             </button>
             <button onclick="switchTab('medicatholic')" id="tab-medicatholic"
                 class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate hover:text-charcoal opacity-60 hover:opacity-100">
-                Medicatholic
+                Meditatio
                 <sup class="font-mono text-[10px] ml-1 text-terracotta">✨</sup>
             </button>
         </div>
@@ -281,19 +281,31 @@
             </div>
         </div>
 
-        <!-- ABA 3: MEDICATHOLIC (Iframe Embedding) -->
+        <!-- ABA 3: MEDITATIO (Iframe Embedding) -->
         <div id="content-medicatholic" class="tab-content">
-            <!-- Medicatholic UI (Native) -->
+            <!-- Meditatio UI (Native) -->
             <div class="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl mx-auto py-12">
                 <div class="text-center mb-16">
                     <span
                         class="font-mono text-xs uppercase tracking-[0.2em] text-terracotta mb-4 block">Espiritualidade
                         & IA</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-paper mb-6">Lectio Divina</h2>
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-paper mb-6">Meditatio</h2>
                     <p class="font-sans text-slate text-lg max-w-2xl mx-auto leading-relaxed">
                         Selecione um tema para receber uma meditação guiada baseada na sabedoria dos santos e na
                         tradição católica.
                     </p>
+                </div>
+
+                <!-- Static Guides Buttons -->
+                <div class="flex justify-center gap-4 mb-12">
+                    <button onclick="showStaticGuide('rosario')"
+                        class="px-6 py-3 border border-sand hover:border-terracotta text-charcoal hover:text-terracotta transition-colors rounded-sm font-serif text-sm">
+                        📿 Como Rezar o Rosário
+                    </button>
+                    <button onclick="showStaticGuide('exame')"
+                        class="px-6 py-3 border border-sand hover:border-terracotta text-charcoal hover:text-terracotta transition-colors rounded-sm font-serif text-sm">
+                        🕯️ Exame de Consciência
+                    </button>
                 </div>
 
                 <!-- Form -->
