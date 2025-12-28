@@ -55,7 +55,7 @@ const blogData = {
             title: "O Supremo Bem e a Decisão",
             date: "20 DEZ 2025",
             category: "Reflexão Teológica",
-            image: "https://images.unsplash.com/photo-1518644730709-0835105d9daa?q=80&w=800&auto=format&fit=crop", // Silhouette/Human connection
+            image: "images/supremo-bem.jpg", // Silhouette/Human connection
             description: "Deus é o Supremo bem, já dizia a teologia tradicional. Ouvi dizer que a substância da vida humana é a narrativa. Há um leque de interpretações para uma mesma narrativa a partir do ponto de vista.",
             link: "#",
             featured: false,
@@ -109,7 +109,7 @@ const blogData = {
         {
             id: "notebooklm-stranger",
             name: "Stranger Things no NotebookLM",
-            category: "PRODUÇÃO DE CONTEÚDO",
+            category: "Fandon",
             description: "Uma 'Bíblia' da série criada com IA. Mergulhe no Mundo Invertido com este guia definitivo gerado pelo NotebookLM do Google.",
             image: "images/stranger-things-suzie.jpg", // Retro Tech / Purple Girl Vibe
             link: "#",

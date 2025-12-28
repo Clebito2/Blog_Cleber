@@ -264,7 +264,7 @@
                         <ul class="font-mono text-xs space-y-2 text-slate/60">
                             <li><i class="fa-solid fa-check text-terracotta mr-2"></i>fontes de pesquisa</li>
                             <li><i class="fa-solid fa-check text-terracotta mr-2"></i>prompts elaborados</li>
-                            <li><i class="fa-solid fa-check text-terracotta mr-2"></i>ferramentas elaboradas</li>
+                            <li><i class="fa-solid fa-check text-terracotta mr-2"></i>ferramentas especificas</li>
                         </ul>
                     </div>
                 </div>
@@ -331,6 +331,7 @@
                 </div>
                 <div>
                     <form name="newsletter" method="POST" data-netlify="true" class="flex flex-col gap-4">
+                        <input type="hidden" name="form-name" value="newsletter" />
                         <div class="flex flex-col md:flex-row gap-4">
                             <input type="email" name="email" placeholder="Seu melhor email" required
                                 class="flex-grow bg-paper/10 border border-paper/20 rounded-sm px-4 py-3 text-paper placeholder-paper/50 focus:outline-none focus:border-terracotta transition-colors font-mono text-sm">
