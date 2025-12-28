@@ -5,7 +5,7 @@ const blogData = {
             title: "Um Encontro Improvável: O Abade, o Dramaturgo e o Psicólogo",
             date: "27 DEZ 2025",
             category: "Conto / Ensaio",
-            image: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=1200&auto=format&fit=crop", // Blue smoke/Book vibe attempt (Concept: Atmosphere)
+            image: "images/blue-smoke-book.png", // Blue smoke/Book vibe attempt (Concept: Atmosphere)
             description: "Mergulhado no simbolismo das letras, flutuando através dos séculos, estava eu na pequena sala da minha casa. Surgiu de entre as páginas uma fumaça azul e fria que subia, contrariando as leis da termodinâmica.",
             link: "#",
             featured: true,
@@ -105,36 +105,13 @@ const blogData = {
         }
     ],
     tools: [
-        {
-            name: "Claude 3.5 Sonnet",
-            category: "LLM / ANÁLISE",
-            description: "Minha escolha primária para raciocínio complexo. Supera o GPT-4 em nuances de escrita e análise de código Python.",
-            link: "#"
-        },
-        {
-            name: "Obsidian",
-            category: "KNOWLEDGE BASE",
-            description: "Onde organizo o pensamento. Um sistema de Zettelkasten digital para conectar filosofia e tecnologia.",
-            link: "#"
-        },
-        {
-            name: "Cursor",
-            category: "DEV ENVIRONMENT",
-            description: "IDE fork do VS Code com IA nativa. Essencial para prototipagem rápida de scripts de automação.",
-            link: "#"
-        },
-        {
-            name: "Perplexity",
-            category: "PESQUISA",
-            description: "Substituto do Google para research denso. Onde verifico fatos antes de escrever qualquer linha.",
-            link: "#"
-        },
+
         {
             id: "notebooklm-stranger",
             name: "Stranger Things no NotebookLM",
             category: "PRODUÇÃO DE CONTEÚDO",
             description: "Uma 'Bíblia' da série criada com IA. Mergulhe no Mundo Invertido com este guia definitivo gerado pelo NotebookLM do Google.",
-            image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1200&auto=format&fit=crop", // Retro Tech / Purple Girl Vibe
+            image: "images/stranger-things-suzie.jpg", // Retro Tech / Purple Girl Vibe
             link: "#",
             content: `
                 <p>Se você é fã de <em>Stranger Things</em> e adora explorar cada detalhe de Hawkins e do Mundo Invertido, preparei algo especial para você. Analisei um conteúdo incrível criado no <strong>NotebookLM</strong> que funciona como uma verdadeira "Bíblia" da série.</p>
