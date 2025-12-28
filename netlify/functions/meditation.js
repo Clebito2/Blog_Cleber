@@ -23,6 +23,8 @@ exports.handler = async (event, context) => {
             specialInstructions = `Para a Leitura, use preferencialmente ensinamentos do livro "Casamento e Família" de Monsenhor Tihamér Tóth, se houver um trecho relevante nas fontes. A Meditação deve abordar a santidade do matrimônio, os deveres dos esposos e a família como igreja doméstica. A Oração deve ser pelos casais e famílias.`;
         } else if (theme === 'Anjo da Guarda') {
             specialInstructions = `Para a Leitura, use preferencialmente ensinamentos do livro "O Meu Anjo e Eu" de Pe. Rogelio T. Alcántara, se houver um trecho relevante nas fontes. A Meditação deve explorar a presença e a ação do anjo da guarda, ensinando a devoção e a confiança neste protetor celeste.`;
+        } else if (theme === 'Mariologia') {
+            specialInstructions = `Para a Leitura, priorize absolutamente o livro "Glórias de Maria Santíssima" de Santo Afonso de Ligório. A Meditação deve aprofundar um dogma ou virtude mariana (como a Imaculada Conceição, Maternidade Divina, Humildade). A Oração deve ser uma súplica filial à Virgem Maria, e a Contemplação, um olhar de amor para com a Mãe de Deus.`;
         }
 
         const prompt = `Você é um diretor espiritual e teólogo católico, especialista em guiar fiéis na prática da Lectio Divina. Sua missão é criar uma meditação temática profunda e pastoral, estritamente focada no tema de "${theme}" e estruturada nos quatro passos da Lectio Divina.
