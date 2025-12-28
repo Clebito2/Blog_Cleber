@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cléber Donato | Consultoria Estratégica</title>
+
+    <!-- Carregando Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F7F7F2',       // Off-White mais quente e limpo
+                        charcoal: '#1A1A1A',    // Preto quase absoluto, mas suave
+                        terracotta: '#9A3B3B',  // Um tom mais profundo e elegante de terracota
+                        slate: '#525252',       // Cinza neutro para textos secundários
+                        sand: '#E5E5E0',        // Bordas sutis
+                    },
+                    fontFamily: {
+                        serif: ['Merriweather', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                        widest: '0.2em',
+                    },
+                    boxShadow: {
+                        'card': '0 10px 30px -10px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 40px -10px rgba(0, 0, 0, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F7F7F2;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Textura de papel ultra sutil (Noise) */
+        .texture-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 50;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Animações de entrada */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Link Underline Animation */
+        .hover-underline {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-terracotta selection:text-white flex flex-col min-h-screen">
+
+    <div class="texture-overlay"></div>
+
+    <!-- Cabeçalho: Glassmorphism Matte -->
+    <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-sand transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="index.html" class="group flex flex-col items-start">
+                <span
+                    class="font-serif text-3xl font-black text-charcoal tracking-tighter group-hover:text-terracotta transition-colors duration-300">
+                    Cléber Donato<span class="text-terracotta group-hover:text-charcoal transition-colors">.</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex gap-10 font-mono text-xs tracking-widest text-slate uppercase">
+                <a href="index.html" class="hover:text-charcoal transition-colors hover-underline">// home</a>
+                <a href="consultoria.html" class="text-terracotta transition-colors hover-underline">// consultoria</a>
+                <a href="#contato" class="hover:text-charcoal transition-colors hover-underline">// contato</a>
+            </nav>
+
+            <button class="md:hidden text-charcoal text-xl p-2">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section Consultoria -->
+    <section class="pt-24 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="max-w-4xl fade-in-up">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="h-[1px] w-8 bg-terracotta"></div>
+                <span class="font-mono text-xs text-terracotta tracking-widest uppercase">
+                    Soluções Corporativas
+                </span>
+            </div>
+            <h1
+                class="font-serif text-5xl md:text-6xl lg:text-7xl text-charcoal leading-[1.1] font-bold tracking-tighter mb-8">
+                Eficiência Operacional & <br>
+                <span class="italic font-light text-slate">Inteligência Estratégica.</span>
+            </h1>
+            <p class="font-sans text-lg text-slate leading-relaxed max-w-xl font-light delay-100 fade-in-up">
+                Transformando negócios através da análise de dados, otimização de processos e uma compreensão profunda
+                do comportamento humano.
+            </p>
+        </div>
+    </section>
+
+    <!-- Navegação de Abas -->
+    <div class="sticky top-24 z-30 bg-paper/95 backdrop-blur-sm pt-2 pb-0 mb-12">
+        <div class="max-w-6xl mx-auto px-6 border-b border-sand flex gap-12" role="tablist">
+            <button onclick="switchTab('servicos')" id="tab-servicos"
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-terracotta text-charcoal opacity-100">
+                Meus Serviços
+                <sup class="font-mono text-[10px] ml-1 text-slate">03</sup>
+            </button>
+            <button onclick="switchTab('metodologia')" id="tab-metodologia"
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate hover:text-charcoal opacity-60 hover:opacity-100">
+                Como Atuo
+                <sup class="font-mono text-[10px] ml-1 text-slate">Processo</sup>
+            </button>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 pb-20 w-full">
+
+        <!-- ABA 1: SERVIÇOS (Conteúdo Estático para garantir exibição) -->
+        <div id="content-servicos" class="tab-content active">
+            <!-- Grid de Serviços -->
+            <div id="services-container" class="grid md:grid-cols-3 gap-8 fade-in-up delay-200">
+
+                <!-- Serviço 1 -->
+                <div
+                    class="group bg-white p-8 border border-sand hover:border-charcoal transition-all duration-300 hover:shadow-card rounded-sm flex flex-col h-full">
+                    <div class="text-terracotta text-3xl mb-6 group-hover:scale-110 transition-transform origin-left">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-4">Diagnóstico Empresarial</h3>
+                    <p class="font-sans text-slate text-sm leading-relaxed mb-6 flex-grow">
+                        Uma análise profunda dos gargalos operacionais da sua empresa. Identificamos ineficiências
+                        ocultas e oportunidades de crescimento que planilhas comuns não mostram.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Análise
+                            de Dados</span>
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Processos</span>
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">ROI</span>
+                    </div>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div
+                    class="group bg-white p-8 border border-sand hover:border-charcoal transition-all duration-300 hover:shadow-card rounded-sm flex flex-col h-full">
+                    <div class="text-terracotta text-3xl mb-6 group-hover:scale-110 transition-transform origin-left">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-4">Implementação de IA</h3>
+                    <p class="font-sans text-slate text-sm leading-relaxed mb-6 flex-grow">
+                        Não é sobre substituir pessoas, mas potencializá-las. Desenvolvo fluxos de trabalho que integram
+                        ferramentas de IA (LLMs, Automação) para reduzir trabalho braçal e aumentar a criatividade.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Inovação</span>
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Automação</span>
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Futuro</span>
+                    </div>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div
+                    class="group bg-white p-8 border border-sand hover:border-charcoal transition-all duration-300 hover:shadow-card rounded-sm flex flex-col h-full">
+                    <div class="text-terracotta text-3xl mb-6 group-hover:scale-110 transition-transform origin-left">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-4">Customer Experience (CX)</h3>
+                    <p class="font-sans text-slate text-sm leading-relaxed mb-6 flex-grow">
+                        Refinamento da jornada do cliente com foco no pós-venda e retenção. Transformo o suporte técnico
+                        em um pilar de fidelização, aplicando psicologia comportamental.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Retenção</span>
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Empatia</span>
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-slate/60 border border-sand px-2 py-1 rounded-sm">Jornada</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ABA 2: METODOLOGIA -->
+        <div id="content-metodologia" class="tab-content">
+            <div class="grid lg:grid-cols-12 gap-12 fade-in-up">
+                <div class="lg:col-span-5">
+                    <h3 class="font-serif text-3xl text-charcoal mb-6">A Lógica por trás do Resultado</h3>
+                    <p class="font-sans text-slate font-light leading-relaxed mb-6 text-justify">
+                        Não acredito em fórmulas mágicas. Minha atuação na <strong>Live Trainings</strong> me ensinou
+                        que cada negócio é um organismo vivo. Meu método combina o rigor analítico da engenharia de
+                        dados com a sensibilidade da psicologia comportamental.
+                    </p>
+                    <div class="h-[1px] w-12 bg-terracotta mb-8"></div>
+                    <a href="mailto:cleberdonato@ecossistemalive.com.br"
+                        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-charcoal border border-sand px-6 py-3 hover:bg-charcoal hover:text-white transition-all rounded-sm">
+                        Agendar Diagnóstico <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div id="methodology-container" class="space-y-6">
+
+                        <!-- Passo 1 -->
+                        <div
+                            class="flex gap-6 items-start border-l-2 border-sand pl-6 hover:border-terracotta transition-colors duration-500 py-2 group">
+                            <span
+                                class="font-mono text-xl text-slate/30 font-bold group-hover:text-terracotta transition-colors">01</span>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-charcoal mb-2">Imersão e Escuta</h4>
+                                <p class="font-sans text-sm text-slate leading-relaxed">
+                                    O primeiro passo é o silêncio. Antes de propor soluções, faço uma imersão na cultura
+                                    da empresa para entender não só os números, mas as pessoas por trás deles.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Passo 2 -->
+                        <div
+                            class="flex gap-6 items-start border-l-2 border-sand pl-6 hover:border-terracotta transition-colors duration-500 py-2 group">
+                            <span
+                                class="font-mono text-xl text-slate/30 font-bold group-hover:text-terracotta transition-colors">02</span>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-charcoal mb-2">Mapeamento Lógico</h4>
+                                <p class="font-sans text-sm text-slate leading-relaxed">
+                                    Utilizo ferramentas de diagramação e análise de dados para criar um mapa visual dos
+                                    processos atuais, identificando onde a energia está sendo desperdiçada.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Passo 3 -->
+                        <div
+                            class="flex gap-6 items-start border-l-2 border-sand pl-6 hover:border-terracotta transition-colors duration-500 py-2 group">
+                            <span
+                                class="font-mono text-xl text-slate/30 font-bold group-hover:text-terracotta transition-colors">03</span>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-charcoal mb-2">Arquitetura da Solução</h4>
+                                <p class="font-sans text-sm text-slate leading-relaxed">
+                                    Desenho o novo fluxo ideal, integrando tecnologia (IA) e ajustes comportamentais. A
+                                    solução precisa ser tecnicamente perfeita e humanamente viável.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Passo 4 -->
+                        <div
+                            class="flex gap-6 items-start border-l-2 border-sand pl-6 hover:border-terracotta transition-colors duration-500 py-2 group">
+                            <span
+                                class="font-mono text-xl text-slate/30 font-bold group-hover:text-terracotta transition-colors">04</span>
+                            <div>
+                                <h4 class="font-serif text-lg font-bold text-charcoal mb-2">Acompanhamento Contínuo</h4>
+                                <p class="font-sans text-sm text-slate leading-relaxed">
+                                    A implementação não termina na entrega. Acompanho a adaptação da equipe e ajusto as
+                                    rotas conforme os dados de performance reais.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Igual ao Index -->
+    <footer class="border-t border-charcoal/10 mt-auto bg-white">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-2">
+                    <h4 class="font-serif text-2xl font-bold text-charcoal mb-6">Cléber Donato.</h4>
+                    <p class="font-sans text-slate font-light leading-relaxed max-w-sm mb-8">
+                        Consultor de negócios no Ecossistema Live. Atuando na intersecção entre inteligência artificial,
+                        comportamento humano e eficiência operacional.
+                    </p>
+                    <div class="flex gap-6 text-charcoal">
+                        <a href="https://www.linkedin.com/in/cl%C3%A9ber-donato-78b653204/" target="_blank"
+                            class="hover:text-terracotta transition-colors"><i
+                                class="fa-brands fa-linkedin text-xl"></i></a>
+                        <a href="https://www.instagram.com/desenvolvimento.continuo1/" target="_blank"
+                            class="hover:text-terracotta transition-colors"><i
+                                class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://www.youtube.com/@cleberdonato2" target="_blank"
+                            class="hover:text-terracotta transition-colors"><i
+                                class="fa-brands fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="font-mono text-xs uppercase tracking-widest text-slate mb-6">Navegação</h5>
+                    <ul class="space-y-4 font-sans text-sm text-charcoal">
+                        <li><a href="index.html"
+                                class="hover:text-terracotta transition-colors hover-underline">Home</a></li>
+                        <li><a href="consultoria.html"
+                                class="hover:text-terracotta transition-colors hover-underline">Consultoria</a></li>
+                        <li><a href="index.html#blog"
+                                class="hover:text-terracotta transition-colors hover-underline">Artigos</a></li>
+                        <li><a href="index.html#lab" class="hover:text-terracotta transition-colors hover-underline">Lab
+                                de IA</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-mono text-xs uppercase tracking-widest text-slate mb-6">Contato</h5>
+                    <ul class="space-y-4 font-sans text-sm text-charcoal">
+                        <li>Goiânia, GO - Brasil</li>
+                        <li><a href="mailto:cleberdonato@ecossistemalive.com.br"
+                                class="hover:text-terracotta transition-colors hover-underline">cleberdonato@ecossistemalive.com.br</a>
+                        </li>
+                    </ul>
+                    <p class="mt-8 font-mono text-[10px] text-slate/50">
+                        © 2026 - Designed by Cléber Donato.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Apenas para Lógica das Abas (Sem dados externos) -->
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            const activeContent = document.getElementById(`content-${tabId}`);
+            activeContent.classList.add('active');
+
+            document.querySelectorAll('[role="tablist"] button').forEach(button => {
+                button.classList.remove('border-terracotta', 'text-charcoal', 'opacity-100');
+                button.classList.add('border-transparent', 'text-slate', 'opacity-60');
+            });
+
+            const activeButton = document.getElementById(`tab-${tabId}`);
+            activeButton.classList.remove('border-transparent', 'text-slate', 'opacity-60');
+            activeButton.classList.add('border-terracotta', 'text-charcoal', 'opacity-100');
+        }
+    </script>
+</body>
+
+</html>
