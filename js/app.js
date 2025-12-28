@@ -14,7 +14,7 @@ function renderPosts() {
     if (featured) {
         featuredContainer.innerHTML = `
             <article onclick="viewPost(${featured.id})" class="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-20 items-center fade-in-up delay-200">
-                <div class="lg:col-span-7 relative overflow-hidden rounded-sm h-[400px] lg:h-[500px]">
+                <div class="lg:col-span-7 relative overflow-hidden rounded-lg h-[400px] lg:h-[500px]">
                     <div class="absolute inset-0 bg-charcoal/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                     <img src="${featured.image}" 
                          alt="${featured.title}" 
@@ -45,7 +45,7 @@ function renderPosts() {
     others.forEach(post => {
         const html = `
             <article onclick="viewPost(${post.id})" class="group cursor-pointer flex flex-col">
-                <div class="aspect-[16/9] overflow-hidden rounded-sm mb-5 bg-gray-200 relative">
+                <div class="aspect-[16/9] overflow-hidden rounded-lg mb-5 bg-gray-200 relative">
                      <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0">
                 </div>
                 <div class="font-mono text-[10px] text-terracotta uppercase tracking-widest mb-2">${post.category}</div>
