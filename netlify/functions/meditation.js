@@ -64,12 +64,21 @@ Retorne APENAS um objeto JSON com a seguinte estrutura, sem markdown codes:
 
     } catch (error) {
         console.error("Error generating meditation:", error);
+
+        // Extract more details if available
+        const status = error.status || (error.response ? error.response.status : 500);
+        const statusText = error.statusText || (error.response ? error.response.statusText : "Unknown Error");
+
         return {
             statusCode: 500,
             body: JSON.stringify({
                 error: "Failed to generate meditation",
                 details: error.message,
-                stack: error.stack
+                debug: {
+                    status: status,
+                    statusText: statusText,
+                    type: error.constructor.name
+                }
             }),
         };
     }
