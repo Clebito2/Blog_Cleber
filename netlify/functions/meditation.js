@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
 
     try {
         const { theme } = JSON.parse(event.body);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", generationConfig: { responseMimeType: "application/json" } });
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
         // logic adapted from medicatholic/src/ai/flows/thematic-meditation.ts
         let specialInstructions = '';
@@ -66,7 +66,11 @@ Retorne APENAS um objeto JSON com a seguinte estrutura, sem markdown codes:
         console.error("Error generating meditation:", error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: "Failed to generate meditation" }),
+            body: JSON.stringify({
+                error: "Failed to generate meditation",
+                details: error.message,
+                stack: error.stack
+            }),
         };
     }
 };
