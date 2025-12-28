@@ -89,6 +89,13 @@ function viewPost(id) {
 
     // Scroll to top smoothly
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Hide Newsletter if it's a Tool (AI Lab)
+    const isTool = blogData.tools.some(t => t.id === id);
+    if (isTool) {
+        const newsletter = document.getElementById('newsletter-section');
+        if (newsletter) newsletter.classList.add('hidden');
+    }
 }
 
 function closePost() {
@@ -103,6 +110,10 @@ function closePost() {
     switchTab('blog');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Show Newsletter again
+    const newsletter = document.getElementById('newsletter-section');
+    if (newsletter) newsletter.classList.remove('hidden');
 }
 
 // Helpers

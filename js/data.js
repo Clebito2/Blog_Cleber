@@ -246,7 +246,7 @@ const blogData = {
             image: "https://i.pinimg.com/736x/a1/0a/c3/a10ac3c933aedef3af85bcda0da945b4.jpg", // Library/Tradition vibe updated
             link: "#",
             content: `
-                <p>Para os leitores que buscam aprofundar sua fé, compreender a doutrina bimilenar da Igreja e cultivar uma vida interior sólida, analisei um <strong>NotebookLM</strong> que é um verdadeiro tesouro espiritual.</p>
+                <p>Para os leitores que buscam aprofundar sua fé, compreender a doutrina bimilenar da Igreja e cultivar uma vida interior sólida, elaborei um <strong>NotebookLM</strong> que é um verdadeiro tesouro espiritual.</p>
 
                 <p>Este não é apenas um conjunto de PDFs; é uma biblioteca de formação católica robusta, reunindo desde a alta teologia escolástica até manuais práticos de ascese e mística. Se você quer estudar o Catolicismo a sério, longe da superficialidade, este é o lugar.</p>
 
