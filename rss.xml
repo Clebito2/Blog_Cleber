@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Cléber Donato</title>
+  <link>https://agequodagis.netlify.app</link>
+  <description>Ensaios, reflexões e atualizações do laboratório de IA.</description>
+  <lastBuildDate>Sun, 28 Dec 2025 03:06:09 GMT</lastBuildDate>
+  <language>pt-br</language>
+  <item>
+    <title>Um Encontro Improvável: O Abade, o Dramaturgo e o Psicólogo</title>
+    <link>https://agequodagis.netlify.app/?post=1</link>
+    <guid>https://agequodagis.netlify.app/?post=1</guid>
+    <description>Mergulhado no simbolismo das letras, flutuando através dos séculos, estava eu na pequena sala da minha casa. Surgiu de entre as páginas uma fumaça azul e fria que subia, contrariando as leis da termodinâmica.</description>
+    <pubDate>Sat, 27 Dec 2025 12:00:00 GMT</pubDate>
+    <category>Conto / Ensaio</category>
+    <enclosure url="https://agequodagis.netlify.app/images/blue-smoke-book.png" length="0" type="image/jpeg" />
+  </item>
+  <item>
+    <title>O Supremo Bem e a Decisão</title>
+    <link>https://agequodagis.netlify.app/?post=2</link>
+    <guid>https://agequodagis.netlify.app/?post=2</guid>
+    <description>Deus é o Supremo bem, já dizia a teologia tradicional. Ouvi dizer que a substância da vida humana é a narrativa. Há um leque de interpretações para uma mesma narrativa a partir do ponto de vista.</description>
+    <pubDate>Sat, 20 Dec 2025 12:00:00 GMT</pubDate>
+    <category>Reflexão Teológica</category>
+    <enclosure url="https://agequodagis.netlify.app/images/supremo-bem.jpg" length="0" type="image/jpeg" />
+  </item>
+  <item>
+    <title>A Arte de Reclamar</title>
+    <link>https://agequodagis.netlify.app/?post=3</link>
+    <guid>https://agequodagis.netlify.app/?post=3</guid>
+    <description>Reclamação vem do latim reclamatione, o ato de gritar em desaprovação. O problema do brasileiro é que ele NÃO SABE reclamar! Uma análise sobre o direito de exigir e a sabedoria de Provérbios 15.</description>
+    <pubDate>Mon, 15 Dec 2025 12:00:00 GMT</pubDate>
+    <category>Comportamento &amp; Ética</category>
+    <enclosure url="https://agequodagis.netlify.app/https://images.unsplash.com/photo-1541844053589-346841d0b34c?q=80&w=800&auto=format&fit=crop" length="0" type="image/jpeg" />
+  </item>
+</channel>
+</rss>

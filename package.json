@@ -1,0 +1,7 @@
+{
+    "name": "blog-pessoal",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "node generate-rss.js"
+    }
+}
