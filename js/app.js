@@ -61,7 +61,50 @@ function renderPosts() {
     });
 }
 
+// Routing Logic
+function handleHashChange() {
+    const hash = window.location.hash;
+
+    // Ignore non-post hashes (like #contato, #newsletter) to prevent conflict with anchors
+    if (hash.startsWith('#post?id=')) {
+        const id = hash.replace('#post?id=', '');
+        // Determine if ID is number (blog) or string (tool)
+        let finalId = id;
+        // Check if it's a number
+        if (!isNaN(parseInt(id)) && /^\d+$/.test(id)) {
+            finalId = parseInt(id);
+        }
+
+        renderPostDetails(finalId);
+    } else {
+        // If hash is empty or not a post hash, verify if we need to close the post view
+        const view = document.getElementById('single-post-view');
+        if (view && !view.classList.contains('hidden')) {
+            closePostDetails();
+        }
+    }
+}
+
+// Trigger hash change to view post
 function viewPost(id) {
+    window.location.hash = `post?id=${id}`;
+}
+
+// Trigger hash clear to close post
+function closePost() {
+    // Remove hash without scrolling (if possible) or just clear it
+    if (window.location.hash.startsWith('#post?id=')) {
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+        // Manually trigger handler because pushState doesn't trigger hashchange
+        handleHashChange();
+    } else {
+        // Fallback
+        closePostDetails();
+    }
+}
+
+// Actual DOM Manipulation (UI Only)
+function renderPostDetails(id) {
     let post = blogData.posts.find(p => p.id === id);
     if (!post && blogData.tools) {
         post = blogData.tools.find(t => t.id === id);
@@ -70,57 +113,81 @@ function viewPost(id) {
 
     // Populate View
     document.getElementById('post-category').innerText = post.category;
-    document.getElementById('post-date').innerText = post.date;
+    document.getElementById('post-date').innerText = post.date || 'Data não disponível';
     document.getElementById('post-title').innerText = post.title || post.name;
-    document.getElementById('post-image').src = post.image || "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"; // Default tech image if missing
-    document.getElementById('post-content').innerHTML = post.content;
+    document.getElementById('post-image').src = post.image || "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop";
+
+    // Inject Content + Copy Link Button
+    const contentContainer = document.getElementById('post-content');
+    contentContainer.innerHTML = post.content;
+
+    // Add Share Button
+    const shareBtn = document.createElement('div');
+    shareBtn.className = "flex justify-center my-8";
+    shareBtn.innerHTML = `
+        <button onclick="copyLink()" class="flex items-center gap-2 px-4 py-2 bg-slate/10 hover:bg-slate/20 text-slate rounded-sm font-mono text-xs transition-colors">
+            <i class="fa-solid fa-link"></i> Copiar Link
+        </button>
+    `;
+    contentContainer.prepend(shareBtn);
 
     // Toggle Views
-    // Hide all tab contents
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden')); // Ensure visually hidden
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
 
-    // Hide tabs navigation
     const tabs = document.querySelector('.sticky.top-24');
     if (tabs) tabs.classList.add('hidden');
 
     const view = document.getElementById('single-post-view');
     view.classList.remove('hidden');
 
-    // Scroll to top smoothly
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Hide Newsletter if it's a Tool (AI Lab)
+    // Hide Newsletter if Tool
     const isTool = blogData.tools.some(t => t.id === id);
     if (isTool) {
-        const newsletter = document.getElementById('newsletter-section');
-        if (newsletter) newsletter.classList.add('hidden');
+        document.getElementById('newsletter-section')?.classList.add('hidden');
     }
+
+    // Update Page Title
+    document.title = `${post.title || post.name} | Cléber Donato`;
 }
 
-function closePost() {
-    // Toggle Views Back
+function closePostDetails() {
     document.getElementById('single-post-view').classList.add('hidden');
 
     // Show tabs
     const tabs = document.querySelector('.sticky.top-24');
     if (tabs) tabs.classList.remove('hidden');
 
-    // Restore Blog tab active (default return)
+    // Restore Default Tab
     switchTab('blog');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Show Newsletter again
-    const newsletter = document.getElementById('newsletter-section');
-    if (newsletter) newsletter.classList.remove('hidden');
+    document.getElementById('newsletter-section')?.classList.remove('hidden');
+
+    // Reset Page Title
+    document.title = 'Cléber | Humanismo Digital';
 }
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Link copiado para a área de transferência!');
+    });
+}
+
 
 // Helpers
 document.addEventListener('DOMContentLoaded', () => {
     renderPosts();
     renderTools();
     updateCounts();
+
+    // Initialize Router
+    window.addEventListener('hashchange', handleHashChange);
+    // Check initial hash on load
+    handleHashChange();
 });
 
 // Keep existing renderTools and updateCounts

@@ -795,7 +795,23 @@
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
+                // Ensure standard tabs logic doesn't conflict with router visibility classes if mixed used, 
+                // but primarily we just need to ensure they are hidden/shown via class
             });
+
+            // If switching tabs manually, ensure we exit post view mode if active
+            const postView = document.getElementById('single-post-view');
+            if (postView && !postView.classList.contains('hidden')) {
+                // Hide post view
+                postView.classList.add('hidden');
+                document.querySelector('.sticky.top-24')?.classList.remove('hidden');
+                document.getElementById('newsletter-section')?.classList.remove('hidden');
+
+                // Clear Hash if it was a post hash (silently, without triggering hashchange)
+                if (window.location.hash.startsWith('#post?id=')) {
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }
+            }
             const activeContent = document.getElementById(`content-${tabId}`);
             activeContent.classList.add('active');
 
