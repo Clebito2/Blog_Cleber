@@ -5,7 +5,7 @@ const blogData = {
             title: "Um Encontro Improvável: O Abade, o Dramaturgo e o Psicólogo",
             date: "27 DEZ 2025",
             category: "Conto / Ensaio",
-            image: "https://images.unsplash.com/photo-1524514587633-bd08d910a347?q=80&w=1200&auto=format&fit=crop", // Library/Meeting atmosphere
+            image: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=1200&auto=format&fit=crop", // Blue smoke/Book vibe attempt (Concept: Atmosphere)
             description: "Mergulhado no simbolismo das letras, flutuando através dos séculos, estava eu na pequena sala da minha casa. Surgiu de entre as páginas uma fumaça azul e fria que subia, contrariando as leis da termodinâmica.",
             link: "#",
             featured: true,
@@ -128,6 +128,59 @@ const blogData = {
             category: "PESQUISA",
             description: "Substituto do Google para research denso. Onde verifico fatos antes de escrever qualquer linha.",
             link: "#"
+        },
+        {
+            id: "notebooklm-stranger",
+            name: "Stranger Things no NotebookLM",
+            category: "PRODUÇÃO DE CONTEÚDO",
+            description: "Uma 'Bíblia' da série criada com IA. Mergulhe no Mundo Invertido com este guia definitivo gerado pelo NotebookLM do Google.",
+            image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1200&auto=format&fit=crop", // Retro Tech / Purple Girl Vibe
+            link: "#",
+            content: `
+                <p>Se você é fã de <em>Stranger Things</em> e adora explorar cada detalhe de Hawkins e do Mundo Invertido, preparei algo especial para você. Analisei um conteúdo incrível criado no <strong>NotebookLM</strong> que funciona como uma verdadeira "Bíblia" da série.</p>
+
+                <p>Aqui está um resumo do que você vai encontrar, como o conteúdo está organizado e por que ele é um recurso indispensável para qualquer fã.</p>
+
+                <h3>📂 O que tem neste conteúdo?</h3>
+                <p>Este Notebook é uma compilação massiva de dados extraídos diretamente da <em>Stranger Things Wiki (Fandom)</em>. Ele não se limita apenas ao básico; é um arquivo profundo que cobre praticamente tudo o que já foi lançado ou discutido sobre a franquia.</p>
+                <p>O conteúdo abrange:</p>
+                <ul>
+                    <li><strong>Personagens Detalhados:</strong> Desde os protagonistas (Eleven, Mike, Dustin) até personagens secundários e figurantes específicos (como o "Agente Reparador" ou membros do "Clube Hellfire"). Inclui biografias, relacionamentos e a evolução de cada um.</li>
+                    <li><strong>Bestiário Completo:</strong> Tudo sobre as criaturas do Mundo Invertido, incluindo o Demogorgon (e suas fases de vida como D'Artagnan), Demobats, Vecna e o Devorador de Mentes.</li>
+                    <li><strong>Locais Icônicos:</strong> Detalhes sobre lugares chave como o Laboratório de Hawkins, a Casa Creel, o Starcourt Mall, a Pizzaria Surfer Boy e até locais do universo expandido como Kamchatka.</li>
+                    <li><strong>Episódios e Cronologia:</strong> Informações sobre episódios específicos de todas as temporadas ("The Vanishing of Will Byers", "Dear Billy", etc.) e uma linha do tempo abrangente que cobre eventos de 1959 até o futuro da série.</li>
+                    <li><strong>Bastidores e Produção:</strong> Dados sobre o elenco, diretores, escritores, figurinos, trilha sonora e curiosidades de produção.</li>
+                    <li><strong>Universo Expandido:</strong> Informações sobre quadrinhos, livros, jogos (como <em>Dead by Daylight</em> e <em>Cooking Diary</em>) e até a peça de teatro <em>The First Shadow</em>.</li>
+                </ul>
+
+                <hr class="my-8 border-charcoal/10" />
+
+                <h3>🏗️ Como foi estruturado?</h3>
+                <p>O conteúdo está estruturado como uma <strong>Enciclopédia Wiki</strong>, organizada por tópicos específicos. O NotebookLM processou centenas de arquivos individuais, permitindo que você faça perguntas complexas e cruze informações de diferentes fontes.</p>
+                <p>Você não precisa ler linearmente. A estrutura permite que você:</p>
+                <ol>
+                    <li><strong>Faça perguntas específicas:</strong> "Qual é a história da família Creel?" ou "Quais são as fraquezas do Vecna?".</li>
+                    <li><strong>Explore conexões:</strong> Entenda como eventos dos quadrinhos se conectam com a série principal.</li>
+                    <li><strong>Analise documentos:</strong> O notebook contém transcrições de artigos de jornal fictícios da série, como "The Boy Who Came Back to Life" e "Mayor Under Fire!".</li>
+                </ol>
+
+                <h3>🔍 O que você pode encontrar (Exemplos)</h3>
+                <ul>
+                    <li><strong>Fatos Obscuros:</strong> Detalhes sobre os outros experimentos do Dr. Brenner (Zero, Um, Dois, etc.).</li>
+                    <li><strong>Análise de Itens:</strong> A história do Camaro do Billy ou o funcionamento do Cerebro (o rádio amador do Dustin).</li>
+                    <li><strong>Curiosidades de Elenco:</strong> Informações sobre os atores e seus papéis anteriores.</li>
+                    <li><strong>Teorias e Futuro:</strong> Pistas sobre o que esperar da 5ª temporada com base em eventos passados e materiais promocionais.</li>
+                </ul>
+
+                <p>Este é o recurso perfeito para quem quer escrever fanfics, criar teorias, mestrar uma campanha de RPG baseada na série ou simplesmente relembrar os melhores momentos antes da temporada final.</p>
+
+                <div class="my-12 p-8 bg-charcoal text-paper rounded-sm text-center">
+                    <p class="font-mono text-xs uppercase tracking-widest text-paper/60 mb-4">Link Externo</p>
+                    <a href="https://notebooklm.google.com/notebook/df9f2ca4-5a72-4c3f-a3f9-402795f50fbf" target="_blank" class="inline-block font-serif text-2xl font-bold border-b border-paper hover:text-terracotta hover:border-terracotta transition-colors pb-1">
+                        Acesse o Stranger Things Compendium
+                    </a>
+                </div>
+            `
         }
     ]
 };

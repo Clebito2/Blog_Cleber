@@ -165,7 +165,8 @@
             </a>
 
             <nav class="hidden md:flex gap-10 font-mono text-xs tracking-widest text-slate uppercase">
-                <a href="#about" class="hover:text-charcoal transition-colors hover-underline">// sobre</a>
+                <button onclick="switchTab('about')"
+                    class="hover:text-charcoal transition-colors hover-underline uppercase">// sobre</button>
                 <a href="consultoria.html" class="hover:text-charcoal transition-colors hover-underline">//
                     consultoria</a>
                 <a href="#contato" class="hover:text-charcoal transition-colors hover-underline">// contato</a>
@@ -177,35 +178,16 @@
         </div>
     </header>
 
-    <!-- Hero Section: Espaço em Branco e Tipografia -->
-    <section id="about-section" class="pt-24 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="max-w-4xl fade-in-up">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="h-[1px] w-8 bg-terracotta"></div>
-                <span class="font-mono text-xs text-terracotta tracking-widest uppercase">
-                    Sobre Mim
-                </span>
-            </div>
-            <h1
-                class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight font-bold tracking-tighter mb-8">
-                Gestor tático de 36 anos, formado em Sistemas de Informação, com uma carreira dedicada a otimizar
-                processos e resolver problemas que parecem insolucionáveis para alguns.
-            </h1>
-            <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-100 fade-in-up mb-6">
-                Carrego uma disciplina que transforma desafios em soluções elegantes — de consultorias em IA para
-                empresas a reflexões profundas inspiradas na literatura russa, na vida dos santos e no que há de melhor
-                sobre desenvolvimento humano.
-            </p>
-            <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-200 fade-in-up">
-                Amante de ficção e cultura, acredito que a boa vontade sempre vence. Aqui, compartilho insights sobre
-                tecnologia e o caminho pra uma vida com mais propósito.
-            </p>
-        </div>
-    </section>
+    <!-- Hero Section REMOVIDA -->
+    <div class="pt-24"></div>
 
     <!-- Navegação de Abas -->
     <div class="sticky top-24 z-30 bg-paper/95 backdrop-blur-sm pt-2 pb-0 mb-12">
         <div class="max-w-6xl mx-auto px-6 border-b border-sand flex gap-12" role="tablist">
+            <button onclick="switchTab('about')" id="tab-about"
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate opacity-60 hover:opacity-100 hover:text-charcoal">
+                Sobre Mim
+            </button>
             <button onclick="switchTab('blog')" id="tab-blog"
                 class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-terracotta text-charcoal opacity-100">
                 Reflexões
@@ -221,6 +203,34 @@
 
     <!-- Conteúdo Principal -->
     <main class="flex-grow max-w-6xl mx-auto px-6 pb-20 w-full">
+
+        <!-- ABA 0: SOBRE MIM -->
+        <div id="content-about" class="tab-content">
+            <div class="max-w-4xl fade-in-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-[1px] w-8 bg-terracotta"></div>
+                    <span class="font-mono text-xs text-terracotta tracking-widest uppercase">
+                        Biografia
+                    </span>
+                </div>
+                <h1
+                    class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight font-bold tracking-tighter mb-8">
+                    Gestor tático de 36 anos, formado em Sistemas de Informação, com uma carreira dedicada a otimizar
+                    processos e resolver problemas que parecem insolucionáveis para alguns.
+                </h1>
+                <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-100 fade-in-up mb-6">
+                    Carrego uma disciplina que transforma desafios em soluções elegantes — de consultorias em IA para
+                    empresas a reflexões profundas inspiradas na literatura russa, na vida dos santos e no que há de
+                    melhor
+                    sobre desenvolvimento humano.
+                </p>
+                <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-200 fade-in-up">
+                    Amante de ficção e cultura, acredito que a boa vontade sempre vence. Aqui, compartilho insights
+                    sobre
+                    tecnologia e o caminho pra uma vida com mais propósito.
+                </p>
+            </div>
+        </div>
 
         <!-- ABA 1: BLOG (Layout Editorial) -->
         <div id="content-blog" class="tab-content active">

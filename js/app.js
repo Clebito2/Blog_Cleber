@@ -62,21 +62,25 @@ function renderPosts() {
 }
 
 function viewPost(id) {
-    const post = blogData.posts.find(p => p.id === id);
+    let post = blogData.posts.find(p => p.id === id);
+    if (!post && blogData.tools) {
+        post = blogData.tools.find(t => t.id === id);
+    }
     if (!post) return;
 
     // Populate View
     document.getElementById('post-category').innerText = post.category;
     document.getElementById('post-date').innerText = post.date;
-    document.getElementById('post-title').innerText = post.title;
-    document.getElementById('post-image').src = post.image;
+    document.getElementById('post-title').innerText = post.title || post.name;
+    document.getElementById('post-image').src = post.image || "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"; // Default tech image if missing
     document.getElementById('post-content').innerHTML = post.content;
 
     // Toggle Views
-    document.getElementById('content-blog').classList.remove('active');
-    document.getElementById('content-blog').classList.add('hidden');
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden')); // Ensure visually hidden
 
-    // Hide tabs
+    // Hide tabs navigation
     const tabs = document.querySelector('.sticky.top-24');
     if (tabs) tabs.classList.add('hidden');
 
@@ -90,12 +94,13 @@ function viewPost(id) {
 function closePost() {
     // Toggle Views Back
     document.getElementById('single-post-view').classList.add('hidden');
-    document.getElementById('content-blog').classList.remove('hidden');
-    document.getElementById('content-blog').classList.add('active');
 
     // Show tabs
     const tabs = document.querySelector('.sticky.top-24');
     if (tabs) tabs.classList.remove('hidden');
+
+    // Restore Blog tab active (default return)
+    switchTab('blog');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -115,18 +120,39 @@ function renderTools() {
     container.innerHTML = '';
 
     blogData.tools.forEach(tool => {
-        const html = `
-            <a href="${tool.link}" class="group p-6 border border-sand bg-white hover:border-charcoal transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-                    <i class="fa-solid fa-arrow-up-right-from-square text-charcoal"></i>
+        let html = '';
+        if (tool.content) {
+            // Render as an Article Card (Clickable to view)
+            html = `
+                <div onclick="viewPost('${tool.id}')" class="group cursor-pointer p-6 border border-sand bg-white hover:border-charcoal transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden flex flex-col h-full">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                         <i class="fa-solid fa-book-open text-charcoal"></i>
+                    </div>
+                    <div class="font-mono text-[10px] text-terracotta mb-4 border border-terracotta/20 inline-block px-2 py-1 rounded-sm">${tool.category}</div>
+                    <h4 class="font-serif text-xl font-bold text-charcoal mb-4">${tool.name}</h4>
+                    <p class="font-sans text-sm text-slate leading-relaxed mb-6 flex-grow">
+                        ${tool.description}
+                    </p>
+                     <div class="flex items-center gap-2 mt-auto">
+                        <span class="font-mono text-xs uppercase tracking-widest text-charcoal border-b border-charcoal pb-1 group-hover:text-terracotta group-hover:border-terracotta transition-all">Ler Análise</span>
+                    </div>
                 </div>
-                <div class="font-mono text-[10px] text-slate mb-4 border border-sand inline-block px-2 py-1 rounded-sm">${tool.category}</div>
-                <h4 class="font-serif text-xl font-bold text-charcoal mb-2">${tool.name}</h4>
-                <p class="font-sans text-sm text-slate leading-relaxed">
-                    ${tool.description}
-                </p>
-            </a>
-        `;
+            `;
+        } else {
+            // Render as a Standard Link Card
+            html = `
+                <a href="${tool.link}" class="group p-6 border border-sand bg-white hover:border-charcoal transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden flex flex-col h-full">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-charcoal"></i>
+                    </div>
+                    <div class="font-mono text-[10px] text-slate mb-4 border border-sand inline-block px-2 py-1 rounded-sm">${tool.category}</div>
+                    <h4 class="font-serif text-xl font-bold text-charcoal mb-2">${tool.name}</h4>
+                    <p class="font-sans text-sm text-slate leading-relaxed">
+                        ${tool.description}
+                    </p>
+                </a>
+            `;
+        }
         container.innerHTML += html;
     });
 }
