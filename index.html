@@ -255,6 +255,32 @@
         </div>
     </div>
 
+    <!-- Custom Styles for Dark Mode Visibility (Fallback) -->
+    <style>
+        .dark #single-post-view #post-title,
+        .dark #single-post-view .font-mono,
+        .dark #single-post-view button,
+        .dark #single-post-view #post-content,
+        .dark #single-post-view #post-content p,
+        .dark #single-post-view #post-content li,
+        .dark #single-post-view #post-content strong {
+            color: #F9F7F1 !important;
+            /* Force paper color */
+        }
+
+        .dark #single-post-view #post-content h1,
+        .dark #single-post-view #post-content h2,
+        .dark #single-post-view #post-content h3,
+        .dark #single-post-view #post-content h4 {
+            color: #F9F7F1 !important;
+        }
+
+        .dark #single-post-view #post-content a {
+            color: #F9F7F1 !important;
+            text-decoration-color: #D3544D;
+        }
+    </style>
+
     <!-- Conteúdo Principal -->
     <main class="flex-grow max-w-6xl mx-auto px-6 pb-20 w-full">
 
