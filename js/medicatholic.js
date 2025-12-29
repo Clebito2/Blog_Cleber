@@ -71,7 +71,7 @@ function renderMeditation(data) {
     const medForm = document.getElementById('meditation-form');
 
     const resetBtn = document.createElement('button');
-    resetBtn.className = "mt-12 mx-auto block text-slate hover:text-terracotta underline decoration-1 underline-offset-4 text-xs tracking-[0.2em] uppercase transition-colors";
+    resetBtn.className = "mt-12 mx-auto block text-slate dark:text-slate-300 hover:text-terracotta underline decoration-1 underline-offset-4 text-xs tracking-[0.2em] uppercase transition-colors";
     resetBtn.textContent = "Nova Meditação";
     resetBtn.onclick = () => {
         container.innerHTML = '';
@@ -97,12 +97,12 @@ function renderMeditation(data) {
                     <!-- Vertical Line -->
                     <div class="absolute left-0 top-2 bottom-0 w-[1px] bg-terracotta/30 group-hover:bg-terracotta transition-colors"></div>
                     
-                    <h3 class="font-serif text-2xl md:text-3xl text-charcoal mb-6 flex items-center gap-4">
+                    <h3 class="font-serif text-2xl md:text-3xl text-charcoal dark:text-paper mb-6 flex items-center gap-4">
                         <span class="text-2xl opacity-40 grayscale group-hover:grayscale-0 transition-all">${sec.icon}</span> 
                         ${item.titulo}
                     </h3>
                     
-                    <div class="prose prose-lg max-w-none text-slate font-light leading-relaxed whitespace-pre-line">
+                    <div class="prose prose-lg max-w-none text-slate dark:text-slate-200 font-light leading-relaxed whitespace-pre-line">
                         ${item.conteudo}
                     </div>
                     
