@@ -89,16 +89,19 @@ const blogData = {
             link: "#",
             featured: false,
             content: `
-                <p>Deus é o Supremo bem, já dizia a teologia tradicional desde que se tenta definir quem é Aquele que é. Isso quer dizer que tudo que vem dele, que faz parte de Sua essência, tudo que dele sai, que dele recebemos ou tomamos, só pode ser bondade, benignidade e graça. Ouvi dizer que a substância da vida humana é a narrativa. Há um leque de interpretações para uma mesma narrativa a partir do ponto de vista. Todas as dores que se converteram em alegrias, passaram pelo crivo da decisão. Foi o estado de ânimo "escolhido" para lidar com aquele capítulo que definiu seu desfecho interpretativo. Recentemente, tive uma experiência um tanto desagradável, que provavelmente muita gente já teve. Os motivos ainda investigo…</p>
-                
-                <p>Estava em um lugar público e movimentado, sentado, pensando na vida. Naquele dia não tinha compromissos nem horários a cumprir, estava "filosófico", melancólico, procurando com quê perder tempo.</p>
-                
-                <p>De repente, uma silhueta atrai meu olhar. É próprio do belo atrair e prender olhares. É próprio do belo reter a atenção de quem dedica-lhe contemplação. Meu olhar elevou-se, abandonando aquela cintura fina que caminhava apressadamente. Queria ver por dentro — os olhos são as janelas da alma — e que surpresa quando aqueles olhos encontraram os meus! Naqueles dois segundos de interação direta e profunda, embora à distância, a intimidade se deu pelo grau de conhecimento anterior da substância daquela vida. Em algum momento das duas narrativas, éramos personagens de uma mesma página.</p>
-                
-                <p>Não era só uma silhueta, era uma pessoa. Uma pessoa que, embora não encontrasse há 15 anos, eu saberia quem avisar caso ela sofresse um atropelamento - isso diz muito sobre o nível de intimidade que se tem com alguém. O enigma sobre o que aconteceu nesses 15 anos, foi o que acelerou meus batimentos cardíacos. O estado de ânimo pusilânime foi o crivo da decisão apática que tornou a experiência desagradável.</p>
-                
-                <p>O supremo bem é perene. O tempo não Lhe é limitante.<br>
-                É a bondade que impede que a eternidade se transforme em monotonia. É a liberdade que nos faz protagonistas da narrativa. Enquanto podemos escolher, nos aproximamos — ou não — da Sua essência.</p>
+                <p>Deus é o Supremo Bem, já dizia a teologia tradicional, desde que se tenta definir quem é Aquele que é. Isso quer dizer que tudo o que vem d'Ele, que faz parte de Sua essência, tudo o que d'Ele sai, que d'Ele recebemos ou tomamos, só pode ser bondade, benignidade e graça.</p>
+
+                <p>Ouvi dizer que a substância da vida humana é a narrativa. Há um leque de interpretações para uma mesma narrativa, dependendo do ponto de vista. Todas as dores que se converteram em alegrias passaram pelo crivo da decisão. Foi o estado de ânimo "escolhido" para lidar com aquele capítulo que definiu seu desfecho interpretativo.</p>
+
+                <p>Recentemente, tive uma experiência um tanto desagradável, que provavelmente muita gente já teve. Os motivos ainda investigo… Estava em um lugar público e movimentado, sentado, pensando na vida. Naquele dia não tinha compromissos nem horários a cumprir; estava "filosófico", melancólico, procurando com que perder tempo.</p>
+
+                <p>De repente, uma silhueta atrai meu olhar. É próprio do belo atrair e prender olhares. É próprio do belo reter a atenção de quem lhe dedica contemplação. Meu olhar elevou-se, abandonando aquela cintura fina que caminhava apressadamente. Queria ver por dentro — os olhos são as janelas da alma — e que surpresa quando aqueles olhos encontraram os meus!</p>
+
+                <p>Naqueles dois segundos de interação direta e profunda, embora à distância, a intimidade se deu pelo grau de conhecimento anterior da substância daquela vida. Em algum momento das duas narrativas, éramos personagens de uma mesma página. Não era só uma silhueta, era uma pessoa. Uma pessoa que, embora não encontrasse há 15 anos, eu saberia quem avisar caso ela sofresse um atropelamento — isso diz muito sobre o nível de intimidade que se tem com alguém.</p>
+
+                <p>O enigma sobre o que aconteceu nesses 15 anos foi o que acelerou meus batimentos cardíacos. O estado de ânimo pusilânime foi o crivo da decisão apática que tornou a experiência desagradável.</p>
+
+                <p>O Supremo Bem é perene. O tempo não Lhe é limitante. É a bondade que impede que a eternidade se transforme em monotonia. É a liberdade que nos faz protagonistas da narrativa. Enquanto podemos escolher, nos aproximamos — ou não — da Sua essência.</p>
             `
         },
         {
