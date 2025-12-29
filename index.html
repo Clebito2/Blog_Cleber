@@ -318,8 +318,8 @@
                 <!-- Sidebar Descritiva -->
                 <div class="lg:col-span-4">
                     <div class="sticky top-40">
-                        <h3 class="font-serif text-3xl text-charcoal mb-4">Stack Técnico</h3>
-                        <p class="font-sans text-slate font-light leading-relaxed mb-6">
+                        <h3 class="font-serif text-3xl text-charcoal dark:text-paper mb-4">Stack Técnico</h3>
+                        <p class="font-sans text-slate dark:text-slate-200 font-light leading-relaxed mb-6">
                             Uma curadoria viva das ferramentas que compõem meu fluxo de trabalho. Selecionadas pela
                             capacidade de ampliar a cognição humana.
                         </p>
@@ -347,8 +347,9 @@
                     <span
                         class="font-mono text-xs uppercase tracking-[0.2em] text-terracotta mb-4 block">Espiritualidade
                         & IA</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-paper mb-6">Meditatio</h2>
-                    <p class="font-sans text-slate text-lg max-w-2xl mx-auto leading-relaxed">
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-paper dark:text-paper mb-6">Meditatio
+                    </h2>
+                    <p class="font-sans text-slate dark:text-slate-200 text-lg max-w-2xl mx-auto leading-relaxed">
                         Selecione um tema para receber uma meditação guiada baseada na sabedoria dos santos e na
                         tradição católica.
                     </p>
@@ -357,11 +358,11 @@
                 <!-- Static Guides Buttons -->
                 <div class="flex justify-center gap-4 mb-12">
                     <button onclick="showStaticGuide('rosario')"
-                        class="px-6 py-3 border border-sand hover:border-terracotta text-charcoal hover:text-terracotta transition-colors rounded-sm font-serif text-sm">
+                        class="px-6 py-3 border border-sand dark:border-white/10 hover:border-terracotta dark:hover:border-terracotta text-charcoal dark:text-paper hover:text-terracotta dark:hover:text-terracotta transition-colors rounded-sm font-serif text-sm">
                         📿 Como Rezar o Rosário
                     </button>
                     <button onclick="showStaticGuide('exame')"
-                        class="px-6 py-3 border border-sand hover:border-terracotta text-charcoal hover:text-terracotta transition-colors rounded-sm font-serif text-sm">
+                        class="px-6 py-3 border border-sand dark:border-white/10 hover:border-terracotta dark:hover:border-terracotta text-charcoal dark:text-paper hover:text-terracotta dark:hover:text-terracotta transition-colors rounded-sm font-serif text-sm">
                         🕯️ Exame de Consciência
                     </button>
                 </div>
@@ -372,40 +373,44 @@
                         <label class="cursor-pointer group block">
                             <input type="radio" name="theme" value="Exame de consciência" class="peer sr-only" checked>
                             <div
-                                class="p-6 border border-slate/20 rounded-lg bg-paper hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-sand/30 transition-all text-center shadow-sm">
+                                class="p-6 border border-slate/20 dark:border-white/10 rounded-lg bg-paper dark:bg-neutral-800 hover:border-terracotta dark:hover:border-terracotta peer-checked:border-terracotta dark:peer-checked:border-terracotta peer-checked:bg-sand/30 dark:peer-checked:bg-white/5 transition-all text-center shadow-sm">
                                 <span
-                                    class="font-serif text-xl text-charcoal block mb-2 group-hover:text-terracotta transition-colors">Exame
+                                    class="font-serif text-xl text-charcoal dark:text-paper block mb-2 group-hover:text-terracotta transition-colors">Exame
                                     de Consciência</span>
-                                <span class="font-sans text-sm text-slate/70">Reflexão e arrependimento</span>
+                                <span class="font-sans text-sm text-slate/70 dark:text-slate-300">Reflexão e
+                                    arrependimento</span>
                             </div>
                         </label>
                         <label class="cursor-pointer group block">
                             <input type="radio" name="theme" value="Casamento" class="peer sr-only">
                             <div
-                                class="p-6 border border-slate/20 rounded-lg bg-paper hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-sand/30 transition-all text-center shadow-sm">
+                                class="p-6 border border-slate/20 dark:border-white/10 rounded-lg bg-paper dark:bg-neutral-800 hover:border-terracotta dark:hover:border-terracotta peer-checked:border-terracotta dark:peer-checked:border-terracotta peer-checked:bg-sand/30 dark:peer-checked:bg-white/5 transition-all text-center shadow-sm">
                                 <span
-                                    class="font-serif text-xl text-charcoal block mb-2 group-hover:text-terracotta transition-colors">Casamento
+                                    class="font-serif text-xl text-charcoal dark:text-paper block mb-2 group-hover:text-terracotta transition-colors">Casamento
                                     e Família</span>
-                                <span class="font-sans text-sm text-slate/70">Santidade no lar</span>
+                                <span class="font-sans text-sm text-slate/70 dark:text-slate-300">Santidade no
+                                    lar</span>
                             </div>
                         </label>
                         <label class="cursor-pointer group block">
                             <input type="radio" name="theme" value="Anjo da Guarda" class="peer sr-only">
                             <div
-                                class="p-6 border border-slate/20 rounded-lg bg-paper hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-sand/30 transition-all text-center shadow-sm">
+                                class="p-6 border border-slate/20 dark:border-white/10 rounded-lg bg-paper dark:bg-neutral-800 hover:border-terracotta dark:hover:border-terracotta peer-checked:border-terracotta dark:peer-checked:border-terracotta peer-checked:bg-sand/30 dark:peer-checked:bg-white/5 transition-all text-center shadow-sm">
                                 <span
-                                    class="font-serif text-xl text-charcoal block mb-2 group-hover:text-terracotta transition-colors">Anjo
+                                    class="font-serif text-xl text-charcoal dark:text-paper block mb-2 group-hover:text-terracotta transition-colors">Anjo
                                     da Guarda</span>
-                                <span class="font-sans text-sm text-slate/70">Devoção e proteção</span>
+                                <span class="font-sans text-sm text-slate/70 dark:text-slate-300">Devoção e
+                                    proteção</span>
                             </div>
                         </label>
                         <label class="cursor-pointer group block">
                             <input type="radio" name="theme" value="Mariologia" class="peer sr-only">
                             <div
-                                class="p-6 border border-slate/20 rounded-lg bg-paper hover:border-terracotta peer-checked:border-terracotta peer-checked:bg-sand/30 transition-all text-center shadow-sm">
+                                class="p-6 border border-slate/20 dark:border-white/10 rounded-lg bg-paper dark:bg-neutral-800 hover:border-terracotta dark:hover:border-terracotta peer-checked:border-terracotta dark:peer-checked:border-terracotta peer-checked:bg-sand/30 dark:peer-checked:bg-white/5 transition-all text-center shadow-sm">
                                 <span
-                                    class="font-serif text-xl text-charcoal block mb-2 group-hover:text-terracotta transition-colors">Mariologia</span>
-                                <span class="font-sans text-sm text-slate/70">Devoção à Virgem Maria</span>
+                                    class="font-serif text-xl text-charcoal dark:text-paper block mb-2 group-hover:text-terracotta transition-colors">Mariologia</span>
+                                <span class="font-sans text-sm text-slate/70 dark:text-slate-300">Devoção à Virgem
+                                    Maria</span>
                             </div>
                         </label>
                     </div>
@@ -429,12 +434,13 @@
 
                 <!-- Static Guides Content (Hidden) -->
                 <div id="static-rosario"
-                    class="hidden fade-in-up max-w-3xl mx-auto bg-white p-8 md:p-12 border border-sand rounded-sm relative mt-12 text-left">
+                    class="hidden fade-in-up max-w-3xl mx-auto bg-white dark:bg-neutral-800 p-8 md:p-12 border border-sand dark:border-white/10 rounded-sm relative mt-12 text-left">
                     <button onclick="hideStaticGuide()"
-                        class="absolute top-4 right-4 text-slate hover:text-terracotta"><i
+                        class="absolute top-4 right-4 text-slate dark:text-slate-300 hover:text-terracotta"><i
                             class="fa-solid fa-xmark text-xl"></i></button>
-                    <h3 class="font-serif text-2xl text-charcoal mb-6 text-center">Como Rezar o Santo Rosário</h3>
-                    <div class="prose prose-slate mx-auto font-light text-sm">
+                    <h3 class="font-serif text-2xl text-charcoal dark:text-paper mb-6 text-center">Como Rezar o Santo
+                        Rosário</h3>
+                    <div class="prose prose-slate dark:prose-invert mx-auto font-light text-sm">
                         <ol class="list-decimal space-y-4 marker:text-terracotta">
                             <li><strong>Sinal da Cruz:</strong> Em nome do Pai, do Filho e do Espírito Santo. Amém.</li>
                             <li><strong>Creio:</strong> Reze o Credo Apostólico segurando a cruz.</li>
@@ -461,17 +467,18 @@
                 </div>
 
                 <div id="static-exame"
-                    class="hidden fade-in-up max-w-4xl mx-auto bg-white p-8 md:p-12 border border-sand rounded-sm relative mt-12 text-left">
+                    class="hidden fade-in-up max-w-4xl mx-auto bg-white dark:bg-neutral-800 p-8 md:p-12 border border-sand dark:border-white/10 rounded-sm relative mt-12 text-left">
                     <button onclick="hideStaticGuide()"
-                        class="absolute top-4 right-4 text-slate hover:text-terracotta"><i
+                        class="absolute top-4 right-4 text-slate dark:text-slate-300 hover:text-terracotta"><i
                             class="fa-solid fa-xmark text-xl"></i></button>
 
-                    <h3 class="font-serif text-3xl text-center text-charcoal font-bold mb-8">EXAME DE CONSCIÊNCIA PARA
+                    <h3 class="font-serif text-3xl text-center text-charcoal dark:text-paper font-bold mb-8">EXAME DE
+                        CONSCIÊNCIA PARA
                         ADULTOS</h3>
                     <p class="font-mono text-xs text-center uppercase tracking-widest text-terracotta mb-8">A PARTIR DOS
                         DEZ MANDAMENTOS DE DEUS E DOS PRECEITOS DA SANTA IGREJA</p>
 
-                    <div class="prose prose-slate max-w-none font-sans text-sm leading-relaxed">
+                    <div class="prose prose-slate dark:prose-invert max-w-none font-sans text-sm leading-relaxed">
                         <p class="italic mb-6">"Para os que depois do Batismo caem em pecados, instituiu Jesus Cristo o
                             Sacramento da Penitência com as palavras 'Recebei o Espírito Santo; àqueles a quem
                             perdoardes os pecados, ser-lhes-ão perdoados, e àqueles a quem os retiverdes, ser-lhes-ão
@@ -498,14 +505,16 @@
                             <li>Aceitação da penitência.</li>
                         </ol>
 
-                        <div class="bg-paper p-6 rounded-sm border-l-4 border-terracotta mb-8">
-                            <h5 class="font-bold text-charcoal mb-2">Oração para antes do exame</h5>
-                            <p class="italic">"Senhor Deus onipotente, prostrado humildemente diante da vossa divina
+                        <div class="bg-paper dark:bg-white/5 p-6 rounded-sm border-l-4 border-terracotta mb-8">
+                            <h5 class="font-bold text-charcoal dark:text-paper mb-2">Oração para antes do exame</h5>
+                            <p class="italic text-slate dark:text-slate-300">"Senhor Deus onipotente, prostrado
+                                humildemente diante da vossa divina
                                 majestade... Rogo-vos, Senhor, humildemente, que vos digneis conceder-me luz abundante
                                 para conhecer todas as faltas e pecados..." (Manual da Paróquia, 1942)</p>
                         </div>
 
-                        <h4 class="font-serif text-xl font-bold text-charcoal mt-8 mb-4">ANTES DOS MANDAMENTOS</h4>
+                        <h4 class="font-serif text-xl font-bold text-charcoal dark:text-paper mt-8 mb-4">ANTES DOS
+                            MANDAMENTOS</h4>
                         <ul class="list-disc pl-5 space-y-2 mb-8">
                             <li>Há quanto tempo fez a última confissão? Recebeu absolvição? Cumpriu a penitência?</li>
                             <li>Ocultou deliberadamente algum pecado mortal anteriormente?</li>
@@ -596,10 +605,12 @@
                             <li>Não celebrar matrimônio proibido (casamento civil apenas, ou amasiamento).</li>
                         </ol>
 
-                        <div class="bg-paper p-6 rounded-sm border-l-4 border-terracotta mb-8">
-                            <h5 class="font-bold text-charcoal mb-4">Oração para depois da confissão (após sair do
+                        <div class="bg-paper dark:bg-white/5 p-6 rounded-sm border-l-4 border-terracotta mb-8">
+                            <h5 class="font-bold text-charcoal dark:text-paper mb-4">Oração para depois da confissão
+                                (após sair do
                                 confessionário)</h5>
-                            <p class="italic mb-4">"Meu bom Jesus, quão bondoso sois! Oh! quem nunca vos ofendera!
+                            <p class="italic text-slate dark:text-slate-300 mb-4">"Meu bom Jesus, quão bondoso sois! Oh!
+                                quem nunca vos ofendera!
                                 Apesar de ter sido tão ingrato para convosco, ainda me recebeis na vossa amizade.
                                 Podíeis ter me dado a morte, quando eu estava em pecado; podíeis ter me sepultado no
                                 inferno para castigar a minha ousadia em transgredir a vossa lei. Mas o vosso amor
@@ -613,10 +624,11 @@
 
                         <hr class="my-8 border-sand">
 
-                        <h4 class="font-serif text-xl font-bold text-charcoal mt-8 mb-6">MÉTODO DE CONFISSÃO</h4>
+                        <h4 class="font-serif text-xl font-bold text-charcoal dark:text-paper mt-8 mb-6">MÉTODO DE
+                            CONFISSÃO</h4>
 
                         <div
-                            class="space-y-4 font-sans text-sm text-charcoal bg-gray-50 p-6 rounded-sm border border-sand">
+                            class="space-y-4 font-sans text-sm text-charcoal dark:text-slate-200 bg-gray-50 dark:bg-neutral-900 p-6 rounded-sm border border-sand dark:border-white/10">
                             <p><span class="font-bold text-terracotta">Penitente:</span> Abençoai-me, Padre, porque
                                 pequei.</p>
 
@@ -656,7 +668,8 @@
                                 confiança na misericórdia divina, incentivando-o ao amor para com Deus. Após as palavras
                                 do Padre, o penitente recita o ato de contrição:</p>
 
-                            <div class="bg-white p-4 rounded border border-sand my-4">
+                            <div
+                                class="bg-white dark:bg-neutral-800 p-4 rounded border border-sand dark:border-white/10 my-4">
                                 <h6 class="font-bold text-terracotta mb-2 uppercase text-xs tracking-widest">Ato de
                                     Contrição (Opção 1)</h6>
                                 <p class="italic">"Senhor meu Jesus Cristo, Deus e homem verdadeiro, Criador e Redentor
@@ -667,7 +680,8 @@
                                     infinita misericórdia o perdão de minhas culpas. Amém."</p>
                             </div>
 
-                            <div class="bg-white p-4 rounded border border-sand my-4">
+                            <div
+                                class="bg-white dark:bg-neutral-800 p-4 rounded border border-sand dark:border-white/10 my-4">
                                 <h6 class="font-bold text-terracotta mb-2 uppercase text-xs tracking-widest">Ato de
                                     Contrição (Opção 2)</h6>
                                 <p class="italic">"Meu Deus, porque sois infinitamente bom e amável, tenho muita pena
@@ -820,7 +834,7 @@
                         Consultor de negócios no Ecossistema Live. Atuando na intersecção entre inteligência artificial,
                         comportamento humano e eficiência operacional.
                     </p>
-                    <div class="flex gap-4 text-charcoal text-sm">
+                    <div class="flex gap-4 text-charcoal dark:text-paper text-sm">
                         <a href="https://www.linkedin.com/in/cl%C3%A9ber-donato-78b653204/" target="_blank"
                             class="hover:text-terracotta transition-colors"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/desenvolvimento.continuo1/" target="_blank"
@@ -831,7 +845,7 @@
                 </div>
 
                 <div>
-                    <h5 class="font-mono text-[10px] uppercase tracking-widest text-slate dark:text-slate-400 mb-1">
+                    <h5 class="font-mono text-[10px] uppercase tracking-widest text-slate dark:text-slate-200 mb-1">
                         Navegação</h5>
                     <ul class="font-sans text-xs text-charcoal dark:text-slate-200 flex flex-col gap-0.5">
                         <li><a href="?tab=about"
@@ -848,7 +862,7 @@
                 </div>
 
                 <div>
-                    <h5 class="font-mono text-[10px] uppercase tracking-widest text-slate dark:text-slate-400 mb-1">
+                    <h5 class="font-mono text-[10px] uppercase tracking-widest text-slate dark:text-slate-200 mb-1">
                         Contato</h5>
                     <ul class="font-sans text-xs text-charcoal dark:text-slate-200 flex flex-col gap-0.5">
                         <li>Goiânia, GO - Brasil</li>
