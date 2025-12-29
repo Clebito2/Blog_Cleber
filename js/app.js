@@ -21,7 +21,7 @@ function renderPosts() {
                          class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
                 </div>
                 <div class="lg:col-span-5 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 font-mono text-xs text-slate dark:text-slate-400 mb-4">
+                    <div class="flex items-center gap-3 font-mono text-xs text-slate dark:text-slate-300 mb-4">
                         <span class="uppercase tracking-widest">${featured.category}</span>
                         <span class="w-1 h-1 rounded-full bg-terracotta"></span>
                         <span>${featured.date}</span>
@@ -29,7 +29,7 @@ function renderPosts() {
                     <h2 class="font-serif text-3xl md:text-4xl text-charcoal dark:text-paper font-bold leading-tight mb-6 group-hover:text-terracotta transition-colors duration-300">
                         ${featured.title}
                     </h2>
-                    <p class="font-sans text-slate dark:text-slate-300 text-base leading-loose font-light mb-6 drop-cap text-justify line-clamp-4">
+                    <p class="font-sans text-slate dark:text-slate-200 text-base leading-loose font-light mb-6 drop-cap text-justify line-clamp-4">
                         ${featured.description}
                     </p>
                     <div class="flex items-center gap-2 group/link">
@@ -52,7 +52,7 @@ function renderPosts() {
                 <h3 class="font-serif text-2xl text-charcoal dark:text-paper font-bold leading-snug mb-3 group-hover:underline decoration-1 underline-offset-4">
                     ${post.title}
                 </h3>
-                <p class="font-sans text-base text-slate dark:text-slate-300 leading-relaxed line-clamp-3">
+                <p class="font-sans text-base text-slate dark:text-slate-200 leading-relaxed line-clamp-3">
                     ${post.description}
                 </p>
             </article>
@@ -208,7 +208,7 @@ function renderTools() {
                     </div>
                     <div class="font-mono text-[10px] text-terracotta mb-4 border border-terracotta/20 inline-block px-2 py-1 rounded-sm">${tool.category}</div>
                     <h4 class="font-serif text-xl font-bold text-charcoal dark:text-paper mb-4">${tool.name}</h4>
-                    <p class="font-sans text-sm text-slate dark:text-slate-300 leading-relaxed mb-6 flex-grow">
+                    <p class="font-sans text-sm text-slate dark:text-slate-200 leading-relaxed mb-6 flex-grow">
                         ${tool.description}
                     </p>
                      <div class="flex items-center gap-2 mt-auto">
@@ -223,9 +223,9 @@ function renderTools() {
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
                         <i class="fa-solid fa-arrow-up-right-from-square text-charcoal dark:text-paper"></i>
                     </div>
-                    <div class="font-mono text-[10px] text-slate dark:text-slate-400 mb-4 border border-sand dark:border-white/10 inline-block px-2 py-1 rounded-sm">${tool.category}</div>
+                    <div class="font-mono text-[10px] text-slate dark:text-slate-300 mb-4 border border-sand dark:border-white/10 inline-block px-2 py-1 rounded-sm">${tool.category}</div>
                     <h4 class="font-serif text-xl font-bold text-charcoal dark:text-paper mb-2">${tool.name}</h4>
-                    <p class="font-sans text-sm text-slate dark:text-slate-300 leading-relaxed">
+                    <p class="font-sans text-sm text-slate dark:text-slate-200 leading-relaxed">
                         ${tool.description}
                     </p>
                 </a>
