@@ -21,20 +21,20 @@ function renderPosts() {
                          class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
                 </div>
                 <div class="lg:col-span-5 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 font-mono text-xs text-slate mb-4">
+                    <div class="flex items-center gap-3 font-mono text-xs text-slate dark:text-slate-400 mb-4">
                         <span class="uppercase tracking-widest">${featured.category}</span>
                         <span class="w-1 h-1 rounded-full bg-terracotta"></span>
                         <span>${featured.date}</span>
                     </div>
-                    <h2 class="font-serif text-3xl md:text-4xl text-charcoal font-bold leading-tight mb-6 group-hover:text-terracotta transition-colors duration-300">
+                    <h2 class="font-serif text-3xl md:text-4xl text-charcoal dark:text-paper font-bold leading-tight mb-6 group-hover:text-terracotta transition-colors duration-300">
                         ${featured.title}
                     </h2>
-                    <p class="font-sans text-slate text-base leading-loose font-light mb-6 drop-cap text-justify line-clamp-4">
+                    <p class="font-sans text-slate dark:text-slate-300 text-base leading-loose font-light mb-6 drop-cap text-justify line-clamp-4">
                         ${featured.description}
                     </p>
                     <div class="flex items-center gap-2 group/link">
-                        <span class="font-mono text-xs uppercase tracking-widest text-charcoal border-b border-charcoal pb-1 group-hover/link:text-terracotta group-hover/link:border-terracotta transition-all">Ler Texto Completo</span>
-                        <i class="fa-solid fa-arrow-right -rotate-45 group-hover/link:rotate-0 transition-transform duration-300 text-xs"></i>
+                        <span class="font-mono text-xs uppercase tracking-widest text-charcoal dark:text-paper border-b border-charcoal dark:border-paper pb-1 group-hover/link:text-terracotta group-hover/link:border-terracotta transition-all">Ler Texto Completo</span>
+                        <i class="fa-solid fa-arrow-right -rotate-45 group-hover/link:rotate-0 transition-transform duration-300 text-xs text-charcoal dark:text-paper group-hover/link:text-terracotta"></i>
                     </div>
                 </div>
             </article>
@@ -45,14 +45,14 @@ function renderPosts() {
     others.forEach(post => {
         const html = `
             <article onclick="viewPost(${post.id})" class="group cursor-pointer flex flex-col">
-                <div class="aspect-[16/9] overflow-hidden rounded-lg mb-5 bg-gray-200 relative">
+                <div class="aspect-[16/9] overflow-hidden rounded-lg mb-5 bg-gray-200 dark:bg-gray-800 relative">
                      <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0">
                 </div>
                 <div class="font-mono text-[10px] text-terracotta uppercase tracking-widest mb-2">${post.category}</div>
-                <h3 class="font-serif text-2xl text-charcoal font-bold leading-snug mb-3 group-hover:underline decoration-1 underline-offset-4">
+                <h3 class="font-serif text-2xl text-charcoal dark:text-paper font-bold leading-snug mb-3 group-hover:underline decoration-1 underline-offset-4">
                     ${post.title}
                 </h3>
-                <p class="font-sans text-base text-slate leading-relaxed line-clamp-3">
+                <p class="font-sans text-base text-slate dark:text-slate-300 leading-relaxed line-clamp-3">
                     ${post.description}
                 </p>
             </article>
@@ -125,7 +125,7 @@ function renderPostDetails(id) {
     const shareContainer = document.createElement('div');
     shareContainer.className = "flex justify-center mt-12 pt-8 opacity-50 hover:opacity-100 transition-opacity";
     shareContainer.innerHTML = `
-        <button onclick="copyLink()" class="text-charcoal hover:text-terracotta transition-colors text-xl" title="Compartilhar Link">
+        <button onclick="copyLink()" class="text-charcoal dark:text-paper hover:text-terracotta transition-colors text-xl" title="Compartilhar Link">
             <i class="fa-solid fa-share-nodes"></i>
         </button>
     `;
@@ -202,30 +202,30 @@ function renderTools() {
         if (tool.content) {
             // Render as an Article Card (Clickable to view)
             html = `
-                <div onclick="viewPost('${tool.id}')" class="group cursor-pointer p-6 border border-sand bg-white hover:border-charcoal transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden flex flex-col h-full">
+                <div onclick="viewPost('${tool.id}')" class="group cursor-pointer p-6 border border-sand dark:border-white/10 bg-white dark:bg-neutral-800 hover:border-charcoal dark:hover:border-paper transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden flex flex-col h-full">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-                         <i class="fa-solid fa-book-open text-charcoal"></i>
+                         <i class="fa-solid fa-book-open text-charcoal dark:text-paper"></i>
                     </div>
                     <div class="font-mono text-[10px] text-terracotta mb-4 border border-terracotta/20 inline-block px-2 py-1 rounded-sm">${tool.category}</div>
-                    <h4 class="font-serif text-xl font-bold text-charcoal mb-4">${tool.name}</h4>
-                    <p class="font-sans text-sm text-slate leading-relaxed mb-6 flex-grow">
+                    <h4 class="font-serif text-xl font-bold text-charcoal dark:text-paper mb-4">${tool.name}</h4>
+                    <p class="font-sans text-sm text-slate dark:text-slate-300 leading-relaxed mb-6 flex-grow">
                         ${tool.description}
                     </p>
                      <div class="flex items-center gap-2 mt-auto">
-                        <span class="font-mono text-xs uppercase tracking-widest text-charcoal border-b border-charcoal pb-1 group-hover:text-terracotta group-hover:border-terracotta transition-all">Ler Análise</span>
+                        <span class="font-mono text-xs uppercase tracking-widest text-charcoal dark:text-paper border-b border-charcoal dark:border-paper pb-1 group-hover:text-terracotta group-hover:border-terracotta transition-all">Ler Análise</span>
                     </div>
                 </div>
             `;
         } else {
             // Render as a Standard Link Card
             html = `
-                <a href="${tool.link}" class="group p-6 border border-sand bg-white hover:border-charcoal transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden flex flex-col h-full">
+                <a href="${tool.link}" class="group p-6 border border-sand dark:border-white/10 bg-white dark:bg-neutral-800 hover:border-charcoal dark:hover:border-paper transition-all duration-300 hover:shadow-hover rounded-sm relative overflow-hidden flex flex-col h-full">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-charcoal"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-charcoal dark:text-paper"></i>
                     </div>
-                    <div class="font-mono text-[10px] text-slate mb-4 border border-sand inline-block px-2 py-1 rounded-sm">${tool.category}</div>
-                    <h4 class="font-serif text-xl font-bold text-charcoal mb-2">${tool.name}</h4>
-                    <p class="font-sans text-sm text-slate leading-relaxed">
+                    <div class="font-mono text-[10px] text-slate dark:text-slate-400 mb-4 border border-sand dark:border-white/10 inline-block px-2 py-1 rounded-sm">${tool.category}</div>
+                    <h4 class="font-serif text-xl font-bold text-charcoal dark:text-paper mb-2">${tool.name}</h4>
+                    <p class="font-sans text-sm text-slate dark:text-slate-300 leading-relaxed">
                         ${tool.description}
                     </p>
                 </a>

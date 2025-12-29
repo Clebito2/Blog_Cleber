@@ -19,7 +19,16 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // Init Theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -170,7 +179,8 @@
     </style>
 </head>
 
-<body class="selection:bg-terracotta selection:text-white flex flex-col min-h-screen">
+<body
+    class="selection:bg-terracotta selection:text-white flex flex-col min-h-screen bg-paper dark:bg-charcoal transition-colors duration-300">
 
     <div class="texture-overlay"></div>
     <div id="cursor-light"></div>
@@ -191,24 +201,29 @@
     </script>
 
     <!-- Cabeçalho: Glassmorphism Matte -->
-    <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-sand transition-all duration-300">
+    <header
+        class="sticky top-0 z-40 bg-paper/85 dark:bg-charcoal/85 backdrop-blur-md border-b border-sand dark:border-white/10 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
             <a href="#" class="group flex flex-col items-start">
                 <span
-                    class="font-serif text-3xl font-black text-charcoal tracking-tighter group-hover:text-terracotta transition-colors duration-300">
+                    class="font-serif text-3xl font-black text-charcoal dark:text-paper tracking-tighter group-hover:text-terracotta transition-colors duration-300">
                     Cléber Donato<span class="text-terracotta group-hover:text-charcoal transition-colors">.</span>
                 </span>
             </a>
 
-            <nav class="hidden md:flex gap-10 font-mono text-xs tracking-widest text-slate uppercase">
+            <nav
+                class="hidden md:flex gap-10 font-mono text-xs tracking-widest text-slate dark:text-slate-400 uppercase">
                 <button onclick="switchTab('about')"
-                    class="hover:text-charcoal transition-colors hover-underline uppercase">// sobre</button>
-                <a href="consultoria.html" class="hover:text-charcoal transition-colors hover-underline">//
+                    class="hover:text-charcoal dark:hover:text-white transition-colors hover-underline uppercase">//
+                    sobre</button>
+                <a href="consultoria.html"
+                    class="hover:text-charcoal dark:hover:text-white transition-colors hover-underline">//
                     consultoria</a>
-                <a href="#contato" class="hover:text-charcoal transition-colors hover-underline">// contato</a>
+                <a href="#contato"
+                    class="hover:text-charcoal dark:hover:text-white transition-colors hover-underline">// contato</a>
             </nav>
 
-            <button class="md:hidden text-charcoal text-xl p-2">
+            <button class="md:hidden text-charcoal dark:text-paper text-xl p-2">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
@@ -218,21 +233,22 @@
     <div class="pt-24"></div>
 
     <!-- Navegação de Abas -->
-    <div class="sticky top-24 z-30 bg-paper/95 backdrop-blur-sm pt-2 pb-0 mb-12">
-        <div class="max-w-6xl mx-auto px-6 border-b border-sand flex gap-12" role="tablist">
+    <div
+        class="sticky top-24 z-30 bg-paper/95 dark:bg-charcoal/95 backdrop-blur-sm pt-2 pb-0 mb-12 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6 border-b border-sand dark:border-white/10 flex gap-12" role="tablist">
 
             <button onclick="switchTab('blog')" id="tab-blog"
-                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-terracotta text-charcoal opacity-100">
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-terracotta text-charcoal dark:text-paper opacity-100">
                 Reflexões
-                <sup id="count-blog" class="font-mono text-[10px] ml-1 text-slate">--</sup>
+                <sup id="count-blog" class="font-mono text-[10px] ml-1 text-slate dark:text-slate-400">--</sup>
             </button>
             <button onclick="switchTab('tools')" id="tab-tools"
-                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate hover:text-charcoal opacity-60 hover:opacity-100">
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate dark:text-slate-400 hover:text-charcoal dark:hover:text-paper opacity-60 hover:opacity-100">
                 Laboratório de IA
-                <sup id="count-tools" class="font-mono text-[10px] ml-1 text-slate">--</sup>
+                <sup id="count-tools" class="font-mono text-[10px] ml-1 text-slate dark:text-slate-400">--</sup>
             </button>
             <button onclick="switchTab('medicatholic')" id="tab-medicatholic"
-                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate hover:text-charcoal opacity-60 hover:opacity-100">
+                class="pb-4 text-base font-serif tracking-wide transition-all border-b-2 border-transparent text-slate dark:text-slate-400 hover:text-charcoal dark:hover:text-paper opacity-60 hover:opacity-100">
                 Meditatio
                 <sup class="font-mono text-[10px] ml-1 text-terracotta">✨</sup>
             </button>
@@ -252,20 +268,23 @@
                     </span>
                 </div>
                 <h1
-                    class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight font-bold tracking-tighter mb-8">
+                    class="font-serif text-3xl md:text-5xl lg:text-6xl text-charcoal dark:text-paper leading-tight font-bold tracking-tighter mb-8 transition-colors">
                     Bem-vindo à minha mente. Eu sou o Cléber.
                 </h1>
-                <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-100 fade-in-up mb-6">
+                <p
+                    class="font-sans text-xl text-slate dark:text-slate-300 leading-relaxed max-w-2xl font-light delay-100 fade-in-up mb-6 transition-colors">
                     Naturalmente introspectivo e de temperamento melancólico, encontro conforto tanto na quietude quanto
                     nas conexões profundas. Minha formação é em tecnologia, mas minha base foi construída nos corredores
                     de um convento franciscano, onde aprendi o valor do silêncio e da disciplina.
                 </p>
-                <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-200 fade-in-up mb-6">
+                <p
+                    class="font-sans text-xl text-slate dark:text-slate-300 leading-relaxed max-w-2xl font-light delay-200 fade-in-up mb-6 transition-colors">
                     Aqui, você vai encontrar um pouco de tudo o que me compõe: reflexões sobre o comportamento humano,
                     análises sobre o futuro da IA, e minha paixão incondicional por narrativas — seja nas páginas densas
                     da literatura russa, na Terra Média de O Hobbit ou nos dramas da Família Soprano.
                 </p>
-                <p class="font-sans text-lg text-slate leading-relaxed max-w-2xl font-light delay-300 fade-in-up">
+                <p
+                    class="font-sans text-xl text-slate dark:text-slate-300 leading-relaxed max-w-2xl font-light delay-300 fade-in-up transition-colors">
                     Este blog é minha tentativa de organizar o caos interno e compartilhar o que aprendo pelo caminho.
                     Escrevo para quem, assim como eu, acredita que a boa vontade sempre vence e que há beleza na
                     complexidade de ser humano.
@@ -722,7 +741,8 @@
                 <img id="post-image" src="" alt="" class="w-full h-full object-cover">
             </div>
 
-            <div id="post-content" class="prose prose-lg prose-slate mx-auto font-serif leading-loose">
+            <div id="post-content"
+                class="prose prose-lg prose-slate dark:prose-invert mx-auto font-serif leading-loose">
                 <!-- Content injected here -->
             </div>
 
@@ -770,8 +790,28 @@
         </div>
     </section>
 
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" onclick="toggleTheme()"
+        class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-charcoal text-paper dark:bg-paper dark:text-charcoal shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-95">
+        <i class="fa-solid fa-moon dark:hidden"></i>
+        <i class="fa-solid fa-sun hidden dark:block"></i>
+    </button>
+
+    <script>
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+    </script>
+
     <!-- Footer Minimalista com Grid -->
-    <footer id="contato" class="border-t border-charcoal/10 mt-auto bg-white">
+    <footer id="contato"
+        class="border-t border-charcoal/10 dark:border-white/10 mt-auto bg-white dark:bg-neutral-900 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-6 py-2">
             <div class="grid md:grid-cols-4 gap-4 items-start">
                 <div class="col-span-2">
