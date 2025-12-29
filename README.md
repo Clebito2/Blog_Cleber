@@ -52,5 +52,32 @@ A IA é instruída a se basear nas seguintes obras:
 *   **Conteúdo:** Inclusão de guias estáticos para "Santo Rosário" e "Exame de Consciência".
 *   **Refinamentos UI:** Ajustes de bordas, transparências e reduções de rodapé para um visual mais leve.
 
+## Identidade Visual v2 & Instruções Técnicas (Pesquisa Posterior)
+
+### 1. Textura de Fundo
+*   **Padrão:** `cubes.png` (Isometric Cubes).
+*   **Fonte:** [Transparent Textures](https://www.transparenttextures.com/patterns/cubes.png).
+*   **Implementação:** CSS na classe `.texture-overlay`.
+    *   `background-image: url(...)`
+    *   `background-attachment: fixed` (Essencial para o efeito de paralaxe estática).
+    *   `opacity: 0.15` (Ajustado para sutileza sem sumir no modo claro).
+
+### 2. Efeito "Spotlight" (Luz do Cursor)
+*   **Elemento:** `<div id="cursor-light">`.
+*   **CSS:**
+    *   `background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.8), transparent)`: Cria o facho de luz suave.
+    *   `mix-blend-mode: overlay`: Permite que a luz interaja com a textura e o fundo.
+    *   `z-index: 1`: Fica acima da textura (`z-0`) mas abaixo do conteúdo.
+*   **JavaScript:** Event listener `mousemove` que atualiza `style.left` e `style.top`.
+
+### 3. Rodapé Compacto
+*   **Diretriz:** O rodapé deve ser uma faixa fina (`py-2`) mas manter todo o texto original.
+*   **Layout:** Margens internas de títulos e textos foram reduzidas (`mb-1`, `mb-0`) para maximizar a economia de espaço vertical.
+
+### 4. Deep Linking de Posts
+*   **Sistema:** Roteamento via Hash.
+*   **Formato:** `index.html#post?id=ID_DO_POST`.
+*   **Lógica:** O script `app.js` detecta mudanças no hash (`window.onhashchange`), oculta a home e exibe o post correspondente carregado de `data.js`.
+
 ---
 *Ecossistema Live © 2025*
