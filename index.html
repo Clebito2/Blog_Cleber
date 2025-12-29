@@ -733,19 +733,20 @@
         <!-- ABA 4: SINGLE POST VIEW (Hidden by default) -->
         <article id="single-post-view" class="hidden fade-in-up">
             <button onclick="closePost()"
-                class="group mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate hover:text-terracotta transition-colors">
+                class="group mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate dark:text-slate-300 hover:text-terracotta dark:hover:text-terracotta transition-colors">
                 <i class="fa-solid fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
                 Voltar
             </button>
 
             <header class="max-w-3xl mx-auto mb-12 text-center">
-                <div class="flex items-center justify-center gap-3 font-mono text-xs text-slate mb-6">
+                <div
+                    class="flex items-center justify-center gap-3 font-mono text-xs text-slate dark:text-slate-300 mb-6">
                     <span id="post-category" class="uppercase tracking-widest">Categoria</span>
                     <span class="w-1 h-1 rounded-full bg-terracotta"></span>
                     <span id="post-date">Data</span>
                 </div>
                 <h1 id="post-title"
-                    class="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight mb-8">
+                    class="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal dark:text-paper font-bold leading-tight mb-8">
                     Título do Post
                 </h1>
             </header>
@@ -760,9 +761,10 @@
                 <!-- Content injected here -->
             </div>
 
-            <div class="max-w-3xl mx-auto mt-20 pt-12 border-t border-charcoal/10 flex justify-center">
+            <div
+                class="max-w-3xl mx-auto mt-20 pt-12 border-t border-charcoal/10 dark:border-white/10 flex justify-center">
                 <button onclick="closePost()"
-                    class="bg-transparent border border-sand hover:border-charcoal text-charcoal px-8 py-3 rounded-sm font-mono text-xs uppercase tracking-widest transition-all">
+                    class="bg-transparent border border-sand dark:border-white/10 hover:border-charcoal dark:hover:border-paper text-charcoal dark:text-paper px-8 py-3 rounded-sm font-mono text-xs uppercase tracking-widest transition-all">
                     Ler outros textos
                 </button>
             </div>
