@@ -346,6 +346,79 @@ const blogData = {
                     </a>
                 </div>
             `
+        },
+        {
+            id: "lista-escolar",
+            name: "Lista Fácil - Organização Escolar",
+            category: "EDUCAÇÃO & TECNOLOGIA",
+            description: "Sistema inteligente para organizar listas de materiais didáticos. Compare cotações, otimize compras e economize tempo no preparo do retorno às aulas.",
+            image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop",
+            link: "#",
+            content: `
+                <p>O início do ano letivo pode ser estressante para muitas famílias. Entre a busca por fornecedores, comparação de preços e organização de itens, o processo de compra de materiais escolares costuma tomar muito tempo e gerar frustrações.</p>
+
+                <p>Pensando nisso, desenvolvi o <strong>Lista Fácil</strong>, um sistema web intuitivo e gratuito que transforma essa experiência, trazendo praticidade, economia e organização para pais, responsáveis e até mesmo escolas.</p>
+
+                <h3>🎯 O que é o Lista Fácil?</h3>
+                <p>O Lista Fácil é uma aplicação web moderna que permite gerenciar listas de materiais escolares de forma inteligente. Com ele, você pode:</p>
+                <ul>
+                    <li><strong>Criar listas personalizadas:</strong> Adicione todos os materiais solicitados pela escola, especificando quantidades e detalhes.</li>
+                    <li><strong>Importar cotações:</strong> Faça upload de fotos de orçamentos ou adicione cotações manualmente de diferentes fornecedores.</li>
+                    <li><strong>Comparar preços automaticamente:</strong> O sistema identifica os melhores preços item por item, calculando o valor total otimizado.</li>
+                    <li><strong>Gerar relatórios:</strong> Visualize relatórios completos com a melhor estratégia de compra para economizar.</li>
+                    <li><strong>Processar imagens com IA:</strong> Utilize inteligência artificial (Google Gemini) para extrair dados de orçamentos fotografados.</li>
+                </ul>
+
+                <h3>💡 Por que usar?</h3>
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">Para Pais e Responsáveis</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Economize tempo comparando cotações em segundos.</li>
+                            <li>• Identifique onde comprar cada item pelo melhor preço.</li>
+                            <li>• Tenha controle total sobre o orçamento familiar.</li>
+                            <li>• Evite compras duplicadas e desperdícios.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-sm border border-sand">
+                        <h4 class="font-bold text-charcoal mb-2">Para Escolas e Educadores</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>• Facilite a vida das famílias oferecendo uma ferramenta prática.</li>
+                            <li>• Promova transparência nas cotações de fornecedores parceiros.</li>
+                            <li>• Modernize o processo de início de ano letivo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>🚀 Funcionalidades em Destaque</h3>
+                <p>O sistema foi desenvolvido com tecnologias modernas (React, TypeScript, Vite) e conta com:</p>
+                <ul>
+                    <li><strong>Interface responsiva:</strong> Funciona perfeitamente em celulares, tablets e computadores.</li>
+                    <li><strong>Processamento inteligente:</strong> IA do Google Gemini extrai dados de imagens de orçamentos automaticamente.</li>
+                    <li><strong>Cálculo automático:</strong> Identifica a combinação de fornecedores que oferece o menor custo total.</li>
+                    <li><strong>Exportação de relatórios:</strong> Gere PDFs ou visualize online suas listas otimizadas.</li>
+                    <li><strong>100% gratuito:</strong> Sem custos, sem anúncios, sem complicações.</li>
+                </ul>
+
+                <h3>🔍 Como funciona?</h3>
+                <ol class="space-y-2">
+                    <li><strong>1. Crie sua lista:</strong> Adicione todos os itens solicitados pela escola.</li>
+                    <li><strong>2. Adicione cotações:</strong> Tire fotos dos orçamentos ou digite manualmente os valores de diferentes papelarias.</li>
+                    <li><strong>3. Compare e decida:</strong> O sistema mostra onde comprar cada item para economizar ao máximo.</li>
+                    <li><strong>4. Organize suas compras:</strong> Tenha um plano claro e eficiente para adquirir tudo que precisa.</li>
+                </ol>
+
+                <p>Desenvolvido com foco na experiência do usuário, o Lista Fácil representa meu compromisso em usar tecnologia para resolver problemas reais do dia a dia. É uma ferramenta prática que já está ajudando famílias a economizar tempo e dinheiro.</p>
+
+                <div class="my-12 p-8 bg-charcoal text-paper rounded-sm text-center">
+                    <p class="font-mono text-xs uppercase tracking-widest text-paper/60 mb-4">Acesso Gratuito</p>
+                    <a href="https://listaescolar.netlify.app/" target="_blank" class="inline-block font-serif text-2xl font-bold border-b border-paper hover:text-terracotta hover:border-terracotta transition-colors pb-1">
+                        Experimente o Lista Fácil
+                    </a>
+                </div>
+
+                <p class="text-sm italic opacity-70 mt-8">💡 <strong>Dica:</strong> O sistema está em constante evolução. Feedbacks e sugestões são sempre bem-vindos para torná-lo ainda mais útil!</p>
+            `
         }
     ]
 };
